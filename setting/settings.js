@@ -1,57 +1,59 @@
-const fs = require('fs')
+const fs = require('fs');
 
-//~~~~~~~~~~~ Settings Owner ~~~~~~~~~~~//
-global.owner = "254756280512"
-global.developer = "254756280512"
-global.bot = ""
-global.devname = "Supreme"
-global.ownername = "Supreme"
-global.botname = "June Md"
-global.versisc = "2"
-global.packname = "⎋June Md"
-//~~~~~~~~~~~ Settings Sosmed ~~~~~~~~~~~//
-global.linkwa = "https://wa.me/254756280512"
-global.linkyt = "https://www.youtube.com/supreme"
-global.linktt = "https://tiktok.com"
-global.linktele = "https://t.me"
+//~~~~~~~~~~~ 👑 Owner & Bot Identity ~~~~~~~~~~~//
+global.owner = "639691465580";
+global.developer = "639691465580";
+global.bot = "";
+global.devname = "💻 Imran Hacks";
+global.ownername = "👑 Imran Khan";
+global.botname = "🤖 IMRAN BOT";
+global.versisc = "2.0.0";
+global.packname = "✨IMRAN BOT✨";
 
-//~~~~~~~~~~~ Settings Bot ~~~~~~~~~~~//
-global.prefix = ["","!",".",",","#","/","🎭","〽️"]
-global.autoRecording = false
-global.autoTyping = true
-global.autorecordtype = false
-global.autoread = true
-global.autobio = false
-global.anti92 = false
-global.owneroff = false
-global.autoswview = true
+//~~~~~~~~~~~ 🌐 Social Links ~~~~~~~~~~~//
+global.linkwa = "https://wa.me/639691465580";
+global.linkyt = "https://www.youtube.com/@imranhacks";
+global.linktt = "https://tiktok.com/@imranhacks";
+global.linktele = "https://t.me/imrankhanbe";
 
-//~~~~~~~~~~~ Settings Thumbnail ~~~~~~~~~~~//
-global.thumbbot = "https://url.bwmxmd.online/Adams.poh4tuhs.jpg"
-global.thumbown = "https://url.bwmxmd.online/Adams.poh4tuhs.jpg"
+//~~~~~~~~~~~ ⚙️ Bot Settings ~~~~~~~~~~~//
+global.prefix = ["", "!", ".", ",", "#", "/", "🎭", "〽️"];
+global.autoRecording = false;
+global.autoTyping = true;
+global.autorecordtype = false;
+global.autoread = true;
+global.autobio = true;
+global.anti92 = false;
+global.owneroff = false;
+global.autoswview = true;
 
-//~~~~~~~~~~~ Settings Channel ~~~~~~~~~~~//
-global.idchannel = "120363402785346228@newsletter*"
-global.channelname = "ーJUNE MD UPDATES"
-global.channel = "hatsapp.com/channel/0029Vb2W2vAADTOKmdoDxB0m"
+//~~~~~~~~~~~ 🖼️ Bot Thumbnails ~~~~~~~~~~~//
+global.thumbbot = "https://files.catbox.moe/q04q5a.jpeg";
+global.thumbown = "https://files.catbox.moe/tbhr2g.jpg";
 
-//~~~~~~~~~~~ Settings Message ~~~~~~~~~~~//
+//~~~~~~~~~~~ 📣 Channel Info ~~~~~~~~~~~//
+global.idchannel = "120363402785346228@newsletter*";
+global.channelname = "🌐 IMRAN BOT UPDATES";
+global.channel = "https://whatsapp.com/channel/0029VbAoVt0Bqbr1vsgafC3r";
+
+//~~~~~~~~~~~ 💬 Custom Messages ~~~~~~~~~~~//
 global.mess = {
-  developer: " `[ Developer Only!! ]` \n This feature is for developers only!!",
-  owner: " `[ Owner Only!! ]` \n This feature is for owners only!!",
-  group: " `[ Group Only!! ]` \n This feature is for group chats only!!",
-  private: " `[ Private Only!! ]` \n This feature is for private chats only!!",
-  admin: " `[ Admin Only!! ]` \n This feature is for admins only!!",
-  botadmin: " `[ Bot Admin Only!! ]` \n This feature is for bot admins only!!",
-  wait: " `[ Wait!! ]` \n Please wait, loading...",
-  error: " `[ Error!! ]` \n An error occurred!!",
-  done: " `[ Done!! ]` \n Process completed!!"
-}
+  developer: "🛠️ *[ Developer Only ]*\nThis feature is only for bot developers!",
+  owner: "👑 *[ Owner Only ]*\nOnly the owner of IMRAN BOT can use this!",
+  group: "👥 *[ Group Only ]*\nThis command works in group chats only!",
+  private: "📥 *[ Private Chat Only ]*\nUse this in a private chat!",
+  admin: "🛡️ *[ Admin Only ]*\nThis command is for group admins only!",
+  botadmin: "🤖 *[ Bot Must Be Admin ]*\nI need admin rights to do this!",
+  wait: "⏳ *Please wait...*\nProcessing your request...",
+  error: "❌ *Oops!*\nAn error occurred, please try again later.",
+  done: "✅ *Done!*\nSuccessfully completed your request!"
+};
 
-let file = require.resolve(__filename)
-require('fs').watchFile(file, () => {
-  require('fs').unwatchFile(file)
-  console.log('\x1b[0;32m'+__filename+' \x1b[1;32mupdated!\x1b[0m')
-  delete require.cache[file]
-  require(file)
-})
+//~~~~~~~~~~~ 🔄 Auto Reload on Save ~~~~~~~~~~~//
+let file = require.resolve(__filename);
+fs.watchFile(file, () => {
+  fs.unwatchFile(file);
+  console.log('\x1b[0;32m' + __filename + ' \x1b[1;32mupdated!\x1b[0m');
+  delete require.cache[file];
+  require(file);
+});
