@@ -3,9 +3,9 @@ const settings = require('../settings.js');
 
 function formatTime(seconds) {
     const days = Math.floor(seconds / (24 * 60 * 60));
-    seconds = seconds % (24 * 60 * 60);
+    seconds %= (24 * 60 * 60);
     const hours = Math.floor(seconds / (60 * 60));
-    seconds = seconds % (60 * 60);
+    seconds %= (60 * 60);
     const minutes = Math.floor(seconds / 60);
     seconds = Math.floor(seconds % 60);
 
@@ -21,21 +21,33 @@ function formatTime(seconds) {
 async function pingCommand(sock, chatId, message) {
     try {
         const start = Date.now();
-        await sock.sendMessage(chatId, { text: ' *𝙹𝚄𝙽𝙴 𝙼𝙳 𝙱𝙾𝚃* ' }, { quoted: message });
+        await sock.sendMessage(chatId, { text: '🛰️ *Connecting to IMRAN BOT servers...*\n_Please wait..._' }, { quoted: message });
         const end = Date.now();
         const ping = Math.round((end - start) / 2);
+        const uptime = formatTime(process.uptime());
+        const platform = os.platform();
+        const cpu = os.cpus()[0].model;
+        const totalMem = Math.round(os.totalmem() / 1024 / 1024);
+        const freeMem = Math.round(os.freemem() / 1024 / 1024);
 
-        const uptimeInSeconds = process.uptime();
-        const uptimeFormatted = formatTime(uptimeInSeconds);
+        const fancyPing = `
+╭━━━[ 🤖 *IMRAN BOT STATUS* 🤖 ]━━━╮
+┃⏱️ *Ping:* ${ping} ms
+┃🕒 *Uptime:* ${uptime}
+┃💻 *Platform:* ${platform}
+┃🧠 *CPU:* ${cpu}
+┃📦 *RAM:* ${freeMem}MB / ${totalMem}MB
+┃🌍 *Time:* ${new Date().toLocaleString()}
+┃🔧 *Version:* ${settings.version}
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-        const botInfo = `🔸 *𝙹𝚄𝙽𝙴* 𝚜𝚙𝚎𝚎𝚍: ${ping} ms`.trim();
+💡 _“Speed is my middle name!” – IMRAN BOT_
+🔥 Type *.menu* to see the magic!`;
 
-        // Reply to the original message with the bot info
-        await sock.sendMessage(chatId, { text: botInfo},{ quoted: message });
-
+        await sock.sendMessage(chatId, { text: fancyPing }, { quoted: message });
     } catch (error) {
-        console.error('Error in ping command:', error);
-        await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
+        console.error('❌ Ping command error:', error);
+        await sock.sendMessage(chatId, { text: '❌ Failed to fetch bot status. Try again later!' });
     }
 }
 
