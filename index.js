@@ -1,4 +1,4 @@
-//➤➤➤➤➤➤➤MD➤JUNE➤MD➤➤➤➤➤➤//
+//➤➤➤➤➤➤➤➤IMRAN BOT➤➤➤➤➤➤➤
 
 
 require('./settings')
@@ -243,7 +243,7 @@ async function startconn() {
                 text: 
                 `
 ┏❐═⭔ *CONNECTED* ⭔═❐
-┃⭔ *Bot:* JUNE MD
+┃⭔ *Bot:* IMRAN BOT
 ┃⭔ *Time:* ${new Date().toLocaleString()}
 ┃⭔ *Status:* Online
 ┃⭔ *User:* ${botNumber}
