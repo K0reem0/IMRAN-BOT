@@ -87,7 +87,10 @@ async function helpCommand(sock, chatId, message) {
 💘 .compliment | 😡 .insult | 😍 .flirt
 📜 .shayari | 🌙 .goodnight | 🌹 .roseday
 🎭 .character | ☠️ .wasted | 🚢 .ship
-😈 .simp | 🤪 .stupid
+😈 .simp | 🤪 .stupid | 🧠 .brainwash | 🐔 .detect
+👻 .ghost | 🧠 .mindread | 💩 .toilet | 📞 .callmom
+💘 .crush | 🪞 .mirror | 🛐 .auntyalert | 💣 .explode
+💻 .imranhack | 🔓 .unhack | 🕵️ .spy
 
 ━━━━━━━━━━━━━━━━━━━━━━
 🧰 *Maker Menu*
