@@ -75,7 +75,7 @@ const store = {
 let phoneNumber = "254792021944"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
-global.botname = "𝐉ᴜɴᴇ 𝐌ᴅ"
+global.botname = "IMRAN BOT"
 global.themeemoji = "•"
 
 const settings = require('./settings')
@@ -147,7 +147,7 @@ async function startconn() {
                             isForwarded: false,
                             forwardedNewsletterMessageInfo: {
                                 newsletterJid: '@newsletter',
-                                newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ',
+                                newsletterName: 'IMRAN BOT',
                                 serverMessageId: -1
                             }
                         }
@@ -205,7 +205,7 @@ async function startconn() {
         if (!!global.phoneNumber) {
             phoneNumber = global.phoneNumber
         } else {
-            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFormat: 2547XXXXX (without + or spaces) : `)))
+            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFormat: 92346XXXXX (without + or spaces) : `)))
         }
 
         // Clean the phone number - remove any non-digit characters
@@ -214,7 +214,15 @@ async function startconn() {
         // Validate the phone number using awesome-phonenumber
         const pn = require('awesome-phonenumber');
         if (!pn('+' + phoneNumber).isValid()) {
-            console.log(chalk.red('Invalid phone number. Please enter your full international number (e.g., 255792021944 for Tanzania, 254798570132 for Kenya, etc.) without + or spaces.'));
+            console.log(chalk.red('❌ Invalid Phone Number!
+
+🔹 Please enter your full international number without "+" or spaces.
+📱 Example formats:
+   🇵🇰 Pakistan: 923461575994
+   🇵🇭 Philippines: 639691465580
+   🇳🇬 Nigeria: 2347012345678
+
+⚠️ Make sure it contains only digits and starts with your country code.'));
             process.exit(1);
         }
 
