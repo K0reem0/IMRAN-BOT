@@ -220,14 +220,24 @@ async function startconn() {
 
         setTimeout(async () => {
             try {
-                let code = await conn.requestPairingCode(phoneNumber)
-                code = code?.match(/.{1,4}/g)?.join("-") || code
-                console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.black(chalk.white(code)))
-                console.log(chalk.yellow(`\nPlease enter this code in your WhatsApp app:\n1. Open WhatsApp\n2. Go to Settings > Linked Devices\n3. Tap "Link a Device"\n4. Enter the code shown above`))
-            } catch (error) {
-                console.error('Error requesting pairing code:', error)
-                console.log(chalk.red('Failed to get pairing code. Please check your phone number and try again.'))
-            }
+    let code = await conn.requestPairingCode(phoneNumber)
+    code = code?.match(/.{1,4}/g)?.join("-") || code
+
+    console.log(chalk.cyan(`\n╔════════════════════════════════════╗`))
+    console.log(chalk.cyan(`║        🤖 IMRAN BOT PAIRING MODE       ║`))
+    console.log(chalk.cyan(`╚════════════════════════════════════╝`))
+    console.log(chalk.greenBright(`\n🔐 Your Pairing Code:`), chalk.black.bgGreen(` ${code} `))
+    console.log(chalk.yellow(`\n📲 Follow these steps:`))
+    console.log(chalk.yellow(`1️⃣  Open WhatsApp`))
+    console.log(chalk.yellow(`2️⃣  Tap *Settings > Linked Devices*`))
+    console.log(chalk.yellow(`3️⃣  Tap *Link a Device*`))
+    console.log(chalk.yellow(`4️⃣  Enter the above code immediately!`))
+    console.log(chalk.redBright(`⚠️  Code is valid for a short time. Don't delay!`))
+} catch (error) {
+    console.error(chalk.red('❌ Error requesting pairing code:'), error)
+    console.log(chalk.redBright('❗ Failed to get pairing code. Please check your number and try again.'))
+}
+
         }, 3000)
     }
 
@@ -260,13 +270,13 @@ async function startconn() {
             });
 
             await delay(1999)
-            console.log(chalk.yellow(`\n\n    ${chalk.bold.blue(`[ ${global.botname || 'KNIGHT BOT'} ]`)}\n\n`))
+            console.log(chalk.yellow(`\n\n    ${chalk.bold.blue(`[ ${global.botname || 'IMRAN BOT'} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
-            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SUPRMELORD`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
+            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: IMRANHACKS OFFICIAL`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: ahmadtech12`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: SUPREMELORD`))
-            console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: IMRAN HACKS TEAM`))
+            console.log(chalk.green(`${global.themeemoji || '•'} 🤖 IMRAN BOT Connected Successfully! ✅`))
             console.log(chalk.cyan(`< ================================================== >`))
         }
         if (
