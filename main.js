@@ -12,6 +12,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn } = require('./lib/index');
 
 // Command imports
+const spyCommand = require('./commands/spy');
 const unhackCommand = require('./commands/unhack'); // Adjust path if needed
 const hackCommand = require('./commands/hack');
 const tagAllCommand = require('./commands/tagall');
@@ -418,6 +419,11 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.rehack':
             case userMessage === '.reversehack':
                 await unhackCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            case userMessage === '.spy':
+            case userMessage === '.spyon':
+            case userMessage === '.imranspy':
+                await spyCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
             case userMessage === '.joke':
                 await jokeCommand(sock, chatId, message);
