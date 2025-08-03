@@ -1,4 +1,3 @@
-// const { ttdl } = require("ruhend-scraper");
 const axios = require('axios');
 
 // Store processed message IDs to prevent duplicates
@@ -13,18 +12,19 @@ async function tiktokCommand(sock, chatId, message) {
 
         const text = message.message?.conversation || message.message?.extendedTextMessage?.text;
         if (!text) {
-            return await sock.sendMessage(chatId, { 
-                text: "Please provide a TikTok link for the video."
+            return await sock.sendMessage(chatId, {
+                text: "📌 Please provide a TikTok video link."
             });
         }
 
         const url = text.split(' ').slice(1).join(' ').trim();
         if (!url) {
-            return await sock.sendMessage(chatId, { 
-                text: "Please provide a TikTok link for the video."
+            return await sock.sendMessage(chatId, {
+                text: "📌 Please provide a TikTok video link."
             });
         }
 
+        // Validate TikTok link
         const tiktokPatterns = [
             /https?:\/\/(?:www\.)?tiktok\.com\//,
             /https?:\/\/(?:vm\.)?tiktok\.com\//,
@@ -35,8 +35,8 @@ async function tiktokCommand(sock, chatId, message) {
 
         const isValidUrl = tiktokPatterns.some(pattern => pattern.test(url));
         if (!isValidUrl) {
-            return await sock.sendMessage(chatId, { 
-                text: "That is not a valid TikTok link. Please provide a valid TikTok video link."
+            return await sock.sendMessage(chatId, {
+                text: "❌ Invalid TikTok link. Please make sure it starts with https://www.tiktok.com/ or similar."
             });
         }
 
@@ -45,13 +45,16 @@ async function tiktokCommand(sock, chatId, message) {
         });
 
         try {
-            // ✅ New API for TikTok download (with watermark)
+            // New TikTok API with watermark
             const apiResponse = await axios.get(`https://iamtkm.vercel.app/downloaders/tiktokdl?url=${encodeURIComponent(url)}`);
             const data = apiResponse.data;
 
             if (data && data.status && data.result && data.result.watermark) {
                 const videoUrl = data.result.watermark;
-                const caption = data.result.title || "𝐉ᴜɴᴇ 𝐌ᴅ";
+                const title = data.result.title || "TikTok Video";
+
+                // Custom caption with branding
+                const caption = `🎬 *TikTok Download Complete!*\n\n📄 *Title:* ${title}\n\n🔗 *Source:* TikTok\n\n🤖 Powered by *IMRAN-BOT*`;
 
                 await sock.sendMessage(chatId, {
                     video: { url: videoUrl },
@@ -60,20 +63,20 @@ async function tiktokCommand(sock, chatId, message) {
                 }, { quoted: message });
             } else {
                 return await sock.sendMessage(chatId, {
-                    text: "Failed to fetch video. Please check the link or try again later."
+                    text: "⚠️ Failed to fetch video. Please try a different link."
                 });
             }
 
         } catch (error) {
             console.error('Error in TikTok API:', error);
             await sock.sendMessage(chatId, {
-                text: "Failed to download the TikTok video. Please try again later."
+                text: "❌ Failed to download the TikTok video. Try again later."
             });
         }
     } catch (error) {
         console.error('Error in TikTok command:', error);
         await sock.sendMessage(chatId, {
-            text: "An unexpected error occurred. Please try again."
+            text: "🚫 An unexpected error occurred. Please try again."
         });
     }
 }
