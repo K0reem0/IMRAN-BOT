@@ -27,9 +27,10 @@ Click the button below to fork IMRAN-BOT repository to your GitHub account.
 
 
 
-✅ When you run your bot on platforms like bot-hosting.net or a VPS, the terminal will display the pairing code automatically!
+✅ When you run your bot on platforms like bot-hosting.net or a VPS, the terminal will say put your number, enter your number and you'll receive pair code.  !
 
-No need to go anywhere else. Just copy the code from the terminal and scan it from WhatsApp to get started. 😄
+copy and paste that code in your Whatsapp and boom 💥 your bot is now connected. 
+No need to go anywhere else. . 😄
 
 💾 3. Download Bot Zip
 
