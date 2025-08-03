@@ -12,6 +12,16 @@ const ffmpeg = require('fluent-ffmpeg');
 const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn } = require('./lib/index');
 
 // Command imports
+const brainwashCommand = require('./commands/brainwash');
+const detectCommand = require('./commands/detect');
+const ghostCommand = require('./commands/ghost');
+const mindreadCommand = require('./commands/mindread');
+const toiletCommand = require('./commands/toilet');
+const callmomCommand = require('./commands/callmom');
+const crushCommand = require('./commands/crush');
+const mirrorCommand = require('./commands/mirror');
+const auntyalertCommand = require('./commands/auntyalert');
+const explodeCommand = require('./commands/explode');
 const spyCommand = require('./commands/spy');
 const unhackCommand = require('./commands/unhack'); // Adjust path if needed
 const hackCommand = require('./commands/hack');
@@ -424,6 +434,46 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.spyon':
             case userMessage === '.imranspy':
                 await spyCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            // .brainwash
+            case userMessage === '.brainwash':
+                await brainwashCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+           // .detect
+            case userMessage === '.detect':
+                await detectCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+           // .ghost
+            case userMessage === '.ghost':
+                await ghostCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+           // .mindread
+            case userMessage === '.mindread':
+                await mindreadCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+          // .toilet
+            case userMessage === '.toilet':
+                await toiletCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+          // .callmom
+            case userMessage === '.callmom':
+                await callmomCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            // .crush
+            case userMessage === '.crush':
+                await crushCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+           // .mirror
+            case userMessage === '.mirror':
+                await mirrorCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+           // .auntyalert
+            case userMessage === '.auntyalert':
+                await auntyalertCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+         // .explode
+            case userMessage === '.explode':
+                await explodeCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
             case userMessage === '.joke':
                 await jokeCommand(sock, chatId, message);
