@@ -2,19 +2,22 @@ const axios = require('axios');
 const { sleep } = require('../lib/myfunc');
 
 async function pairCommand(sock, chatId, message, q) {
+    // Shared context info with IMRAN-BOT branding
+    const newsletterMeta = {
+        forwardingScore: 1,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+            newsletterJid: '@newsletter',
+            newsletterName: '🛠️ IMRAN-BOT',
+            serverMessageId: -1
+        }
+    };
+
     try {
         if (!q) {
             return await sock.sendMessage(chatId, {
-                text: "Please provide valid WhatsApp number\nExample: .pair 25479857xxxx",
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '@newsletter',
-                        newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ',
-                        serverMessageId: -1
-                    }
-                }
+                text: "📞 Please provide a valid WhatsApp number.\nExample: `.pair 923001234567`",
+                contextInfo: newsletterMeta
             });
         }
 
@@ -24,16 +27,8 @@ async function pairCommand(sock, chatId, message, q) {
 
         if (numbers.length === 0) {
             return await sock.sendMessage(chatId, {
-                text: "Invalid number❌️ Please use the correct format!",
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '@newsletter',
-                        newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ',
-                        serverMessageId: -1
-                    }
-                }
+                text: "❌ Invalid number format. Please use something like `923001234567`.",
+                contextInfo: newsletterMeta
             });
         }
 
@@ -43,30 +38,14 @@ async function pairCommand(sock, chatId, message, q) {
 
             if (!result[0]?.exists) {
                 return await sock.sendMessage(chatId, {
-                    text: `The number is not registered on WhatsApp❗️`,
-                    contextInfo: {
-                        forwardingScore: 1,
-                        isForwarded: true,
-                        forwardedNewsletterMessageInfo: {
-                            newsletterJid: '@newsletter',
-                            newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ',
-                            serverMessageId: -1
-                        }
-                    }
+                    text: `❗ The number *${number}* is not registered on WhatsApp.`,
+                    contextInfo: newsletterMeta
                 });
             }
 
             await sock.sendMessage(chatId, {
-                text: "Wait a moment for the code",
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '@newsletter',
-                        newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ ',
-                        serverMessageId: -1
-                    }
-                }
+                text: "⏳ Please wait while we fetch the pairing code...",
+                contextInfo: newsletterMeta
             });
 
             try {
@@ -74,61 +53,38 @@ async function pairCommand(sock, chatId, message, q) {
                 
                 if (response.data && response.data.code) {
                     const code = response.data.code;
-                    if (code === "Service Unavailable") {
-                        throw new Error('Service Unavailable');
-                    }
-                    
-                    await sleep(5000);
+                    if (code === "Service Unavailable") throw new Error('Service Unavailable');
+
+                    await sleep(3000);
+
                     await sock.sendMessage(chatId, {
-                        text: `Your pairing code: ${code}`,
-                        contextInfo: {
-                            forwardingScore: 1,
-                            isForwarded: true,
-                            forwardedNewsletterMessageInfo: {
-                                newsletterJid: '@newsletter',
-                                newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ ',
-                                serverMessageId: -1
-                            }
-                        }
+                        text: `✅ *Pairing Code:* \`${code}\`\nUse this code in terminal when prompted.`,
+                        contextInfo: newsletterMeta
                     });
                 } else {
                     throw new Error('Invalid response from server');
                 }
+
             } catch (apiError) {
                 console.error('API Error:', apiError);
-                const errorMessage = apiError.message === 'Service Unavailable' 
-                    ? "Service is currently unavailable. Please try again later."
-                    : "Failed to generate pairing code. Please try again later.";
-                
+                const errorMessage = apiError.message === 'Service Unavailable'
+                    ? "🚫 Service is currently unavailable. Please try again later."
+                    : "⚠️ Failed to generate pairing code. Please try again later.";
+
                 await sock.sendMessage(chatId, {
                     text: errorMessage,
-                    contextInfo: {
-                        forwardingScore: 1,
-                        isForwarded: true,
-                        forwardedNewsletterMessageInfo: {
-                            newsletterJid: '@newsletter',
-                            newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ',
-                            serverMessageId: -1
-                        }
-                    }
+                    contextInfo: newsletterMeta
                 });
             }
         }
+
     } catch (error) {
-        console.error(error);
+        console.error('Unexpected Error:', error);
         await sock.sendMessage(chatId, {
-            text: "An error occurred. Please try again later.",
-            contextInfo: {
-                forwardingScore: 1,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '@newsletter',
-                    newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ',
-                    serverMessageId: -1
-                }
-            }
+            text: "❌ An unexpected error occurred. Please try again later.",
+            contextInfo: newsletterMeta
         });
     }
 }
 
-module.exports = pairCommand; 
+module.exports = pairCommand;
