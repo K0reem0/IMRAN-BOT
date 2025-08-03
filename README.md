@@ -52,17 +52,7 @@ Watch the tutorial and deploy your bot easily.
 </div>
 ---
 
-👥 Contributor
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://telegra.ph/file/83bc8e7e69752e49c7b3c.jpg" width="100px;" alt="Angel Jane"/><br>
-      <sub><b>Angel Jane 🇵🇭</b></sub>
-    </td>
-  </tr>
-</table>
----
 
 🧩 Features
 
