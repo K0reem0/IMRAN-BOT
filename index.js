@@ -214,15 +214,7 @@ async function startconn() {
         // Validate the phone number using awesome-phonenumber
         const pn = require('awesome-phonenumber');
         if (!pn('+' + phoneNumber).isValid()) {
-            console.log(chalk.red('❌ Invalid Phone Number!
-
-🔹 Please enter your full international number without "+" or spaces.
-📱 Example formats:
-   🇵🇰 Pakistan: 923461575994
-   🇵🇭 Philippines: 639691465580
-   🇳🇬 Nigeria: 2347012345678
-
-⚠️ Make sure it contains only digits and starts with your country code.'));
+            console.log(chalk.red('Invalid phone number. Please enter your full international number (e.g., 255792021944 for Tanzania, 254798570132 for Kenya, etc.'));
             process.exit(1);
         }
 
