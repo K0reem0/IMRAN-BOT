@@ -5,7 +5,7 @@
     <img src="https://readme-typing-svg.demolab.com?font=Rockwell&size=50&pause=1000&color=33ff00&center=true&width=910&height=100&lines=IMRAN-BOT;Multi+Device+Whatsapp+Bot;Made+with+Love+by+Imran+Hacks" alt="Typing SVG" />
   </a> 
 </div> <div align="center"> 
-  <img src="https://raw.githubusercontent.com/ahmadtech12/IMRAN-BOT/main/assets/imran-bot-logo.jpg" alt="IMRAN BOT" height="300">
+  <img src="https://raw.githubusercontent.com/ahmadtech12/IMRAN-BOT/main/assets/june_menu.jpg" alt="IMRAN BOT" height="300">
 </div>
 ---
 
