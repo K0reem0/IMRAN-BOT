@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const aliveCommand = require('./commands/alive');
 const fartblasttextCommand = require('./commands/fartblasttext');
 const bedskillsCommand = require('./commands/bedskills');
 const brainwashCommand = require('./commands/brainwash');
