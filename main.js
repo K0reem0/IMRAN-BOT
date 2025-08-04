@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const bedskillsCommand = require('./commands/bedskills');
 const brainwashCommand = require('./commands/brainwash');
 const detectCommand = require('./commands/detect');
 const ghostCommand = require('./commands/ghost');
@@ -443,6 +444,11 @@ async function handleMessages(sock, messageUpdate, printLog) {
            // .detect
             case userMessage === '.detect':
                 await detectCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            // .bedskills or .bedrate
+            case userMessage === '.bedskills':
+            case userMessage === '.bedrate':
+                await bedskillsCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
            // .ghost
             case userMessage === '.ghost':
