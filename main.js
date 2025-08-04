@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const fartblasttextCommand = require('./commands/fartblasttext');
 const bedskillsCommand = require('./commands/bedskills');
 const brainwashCommand = require('./commands/brainwash');
 const detectCommand = require('./commands/detect');
@@ -436,6 +437,12 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.spyon':
             case userMessage === '.imranspy':
                 await spyCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            case userMessage === '.fartblasttext':
+            case userMessage === '.fartanim':
+            case userMessage === '.gasbomb':
+            case userMessage === '.fartline':
+                await fartblasttextCommand.run({ conn: sock, m: message });
                 break;
             // .brainwash
             case userMessage === '.brainwash':
