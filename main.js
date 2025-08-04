@@ -10,14 +10,7 @@ const path = require('path');
 const axios = require('axios');
 const ffmpeg = require('fluent-ffmpeg');
 const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn } = require('./lib/index');
-const funCommandMap = new Map();
-const funCommandsDir = path.join(__dirname, 'commands', 'fun');
-fs.readdirSync(funCommandsDir).forEach(file => {
-  if (file.endsWith('.js')) {
-    const cmd = require(path.join(funCommandsDir, file));
-    if (cmd.name) funCommandMap.set(`.${cmd.name.toLowerCase()}`, cmd);
-  }
-});
+
 
 // Command imports
 const brainwashCommand = require('./commands/brainwash');
