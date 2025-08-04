@@ -6,14 +6,20 @@ module.exports = {
   description: "Weird animated fart roast for the tagged user",
   category: "fun",
   async run({ conn, m }) {
-    const mentionedJid = m.mentionedJid?.[0] || m.quoted?.participant;
-    if (!mentionedJid) {
+    // Try to detect target from mention, reply, or fallback to sender
+    const mention = m.mentionedJid?.[0];
+    const replyUser = m.quoted?.sender || m.quoted?.participant;
+    const sender = m.sender;
+
+    // Priority: tag > reply > sender
+    const target = mention || replyUser || sender;
+    const tag = "@" + target.split("@")[0];
+
+    if (!target || target === sender) {
       return conn.sendMessage(m.chat, {
-        text: "💨 Tag or reply to someone to drop a fart bomb on them!",
+        text: "💨 *Tag or reply to someone* to drop a fart bomb on them!",
       }, { quoted: m });
     }
-
-    const tag = "@" + mentionedJid.split("@")[0];
 
     const animation = [
       "😐",
@@ -35,41 +41,32 @@ module.exports = {
       `🧻 ${tag}'s fart echo triggered car alarms in 3 cities.`,
       `💀 ${tag}'s butt just committed an unspeakable war crime.`,
       `🦠 Scientists are now studying ${tag}'s fart as a new virus strain.`,
-      `💃 Even ghosts left the house after ${tag} farted.`,
       `🕳️ A black hole opened from ${tag}'s rear end.`,
       `🔥 NASA mistook ${tag}'s fart for an asteroid strike.`,
-      `🌋 ${tag}'s fart caused a volcano to apologize.`,
       `📴 Everyone’s WiFi disconnected after ${tag}'s fart shockwave.`,
-      `🎺 ${tag} invented a new musical instrument using their butt.`,
-      `🔊 ${tag}'s fart got copyright claimed for being too unique.`,
-      `🧼 Air fresheners gave up and resigned.`,
       `🎬 Netflix is making a documentary on ${tag}'s fart.`,
-      `🌐 The entire internet slowed down for 3 seconds due to ${tag}'s gas.`,
-      `🥩 Meat turned vegan just smelling ${tag}'s fart.`,
-      `🪖 ${tag}'s fart just got deployed to defend the borders.`,
-      `🎃 Even pumpkins refused to be carved near ${tag}.`
+      `🧼 Air fresheners gave up and resigned.`,
     ];
 
-    // Send animation sequence
     for (let line of animation) {
       await conn.sendMessage(m.chat, {
         text: line,
-        mentions: [mentionedJid],
+        mentions: [target],
       }, { quoted: m });
       await delay(700);
     }
 
-    // Send random roast
+    // Send final roast
     const roast = finalRoasts[Math.floor(Math.random() * finalRoasts.length)];
     await conn.sendMessage(m.chat, {
       text: roast,
-      mentions: [mentionedJid],
+      mentions: [target],
     }, { quoted: m });
 
-    // Send caption (branding)
+    // Bot branding
     await conn.sendMessage(m.chat, {
       text: `💨 *Fart mission complete.*\n🤖 *Powered by IMRAN BOT*`,
-      mentions: [mentionedJid],
+      mentions: [target],
     }, { quoted: m });
   }
 };
