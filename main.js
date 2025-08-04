@@ -13,6 +13,11 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const gaycheckCommand = require('./commands/gaycheck');
+const lovecheckCommand = require('./commands/lovecheck');
+const hornycheckCommand = require('./commands/hornycheck');
+const pussyloverCommand = require('./commands/pussylover');
+const gaydetectorCommand = require('./commands/gaydetector');
 const aliveCommand = require('./commands/alive');
 const fartblasttextCommand = require('./commands/fartblasttext');
 const bedskillsCommand = require('./commands/bedskills');
@@ -445,6 +450,41 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.fartline':
                 await fartblasttextCommand.run({ conn: sock, m: message });
                 break;
+            // 💘 LOVE CHECK
+            case userMessage === '.lovecheck':
+            case userMessage === '.loverate':
+            case userMessage === '.lovemeter':
+                await lovecheckCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+
+           // 🔞 HORNY CHECK
+            case userMessage === '.hornycheck':
+            case userMessage === '.hornymeter':
+            case userMessage === '.ishorny':
+                await hornycheckCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+
+            // 🐱 PUSSY LOVER
+            case userMessage === '.pussylover':
+            case userMessage === '.catlover':
+            case userMessage === '.meowboy':
+                await pussyloverCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+
+           // 🌈 GAY DETECTOR (Big detailed version)
+            case userMessage === '.gaydetector':
+            case userMessage === '.howgay':
+            case userMessage === '.rainbowscan':
+                await gaydetectorCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+
+           // 🏳️‍🌈 GAY CHECK (Quick % style)
+            case userMessage === '.gaycheck':
+            case userMessage === '.gayrate':
+            case userMessage === '.gaylvl':
+                await gaycheckCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+
             case userMessage === '.alive':
                 await aliveCommand(sock, chatId, message);
                 break;
