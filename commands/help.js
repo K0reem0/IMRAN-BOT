@@ -91,6 +91,7 @@ async function helpCommand(sock, chatId, message) {
 👻 .ghost | 🧠 .mindread | 💩 .toilet | 📞 .callmom
 💘 .crush | 🪞 .mirror | 🛐 .auntyalert | 💣 .explode
 💻 .imranhack | 🔓 .unhack | 🕵️ .spy
+💨 .bombgas | 🛏️ .bedrate
 
 ━━━━━━━━━━━━━━━━━━━━━━
 🧰 *Maker Menu*
@@ -116,6 +117,7 @@ async function helpCommand(sock, chatId, message) {
 
     try {
         const imagePath = path.join(__dirname, '../assets/june_repo.jpg');
+        const audioPath = path.join(__dirname, '../assets/menu.mp3');
 
         if (fs.existsSync(imagePath)) {
             const imageBuffer = fs.readFileSync(imagePath);
@@ -127,12 +129,25 @@ async function helpCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: false,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '@newsletter',
+                        newsletterJid: '0029VbAoVt0Bqbr1vsgafC3r@newsletter',
                         newsletterName: '',
                         serverMessageId: -1
                     }
                 }
             }, { quoted: message });
+
+            // Send menu.mp3 audio after image
+            if (fs.existsSync(audioPath)) {
+                const audioBuffer = fs.readFileSync(audioPath);
+                await sock.sendMessage(chatId, {
+                    audio: audioBuffer,
+                    mimetype: 'audio/mp4',
+                    ptt: false
+                }, { quoted: message });
+            } else {
+                console.warn('menu.mp3 not found in assets');
+            }
+
         } else {
             console.error('Bot image not found at:', imagePath);
             await sock.sendMessage(chatId, {
@@ -141,13 +156,14 @@ async function helpCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: false,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '@newsletter',
-                        newsletterName: '𝐈𝐌𝐑𝐀𝐍 𝐁𝐎𝐓',
+                        newsletterJid: '0029VbAoVt0Bqbr1vsgafC3r@newsletter',
+                        newsletterName: 'IMRAN BOT',
                         serverMessageId: -1
                     }
                 }
             });
         }
+
     } catch (error) {
         console.error('Error in help command:', error);
         await sock.sendMessage(chatId, { text: helpMessage });
