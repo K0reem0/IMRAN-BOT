@@ -445,6 +445,9 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.fartline':
                 await fartblasttextCommand.run({ conn: sock, m: message });
                 break;
+            case userMessage === '.alive':
+                await aliveCommand(sock, chatId, message);
+                break;
             // .brainwash
             case userMessage === '.brainwash':
                 await brainwashCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
