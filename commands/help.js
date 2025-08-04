@@ -4,9 +4,9 @@ const path = require('path');
 
 function formatTime(seconds) {
     const days = Math.floor(seconds / (24 * 60 * 60));
-    seconds = seconds % (24 * 60 * 60);
+    seconds %= (24 * 60 * 60);
     const hours = Math.floor(seconds / (60 * 60));
-    seconds = seconds % (60 * 60);
+    seconds %= (60 * 60);
     const minutes = Math.floor(seconds / 60);
     seconds = Math.floor(seconds % 60);
 
@@ -37,53 +37,53 @@ async function helpCommand(sock, chatId, message) {
 ⚡ *Speed:* ${ping}ms
 🛠️ *Version:* ${settings.version}
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 📂 *Owner Commands*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🔒 .ban | .unban | .promote | .demote
 🔕 .mute | .unmute | .delete | .kick
 ⚠️ .warnings | .warn | .antilink | .antibadword
 🧹 .clear | .tag | .tagall | .chatbot
 🔗 .resetlink | .welcome | .goodbye
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🌐 *General Commands*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 📜 .menu | 📶 .ping | ⏱️ .runtime | 🔊 .tts
 👑 .owner | 😂 .joke | 💬 .quote | 🧠 .fact
 🌦️ .weather | 📰 .news | 💌 .attp | 🎵 .lyrics
 🎱 .8ball | ℹ️ .groupinfo | 👮 .admins | 🔍 .jid
 📸 .ss | 🌍 .trt | 📞 .vv
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 ⚙️ *Settings Commands*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🌐 .public | 🔐 .private | 🟢 .autostatus
 📖 .autoread | 🧹 .clearsession | 🛡️ .antidelete
 🧼 .cleartmp | 💬 .autoreact | 🖼️ .getpp | 📸 .setpp
 📜 .autobio | ⌨️ .autotyping | 🎙️ .autorecording
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🎨 *Sticker Commands*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🌀 .blur | 🖼️ .simage | 🌟 .sticker | 🐯 .tgsticker
 🤣 .meme | 🎯 .take | 🔀 .emojimix
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🎮 *Game Commands*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 ❌⭕ .tictactoe | 🎯 .hangman | ❓ .guess
 🧠 .trivia | ✍️ .answer | 🤐 .truth | 😈 .dare
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🧠 *AI & Search*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🤖 .gpt | 💡 .gptgo | 🧬 .gemini | 🧠 .flux
 🎨 .imagine
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🎭 *Fun Commands*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 💘 .compliment | 😡 .insult | 😍 .flirt
 📜 .shayari | 🌙 .goodnight | 🌹 .roseday
 🎭 .character | ☠️ .wasted | 🚢 .ship
@@ -91,26 +91,28 @@ async function helpCommand(sock, chatId, message) {
 👻 .ghost | 🧠 .mindread | 💩 .toilet | 📞 .callmom
 💘 .crush | 🪞 .mirror | 🛐 .auntyalert | 💣 .explode
 💻 .imranhack | 🔓 .unhack | 🕵️ .spy
-💨 .bombgas | 🛏️ .bedrate
+💨 .bombgas | 🛏️ .bedrate | 🤰 .pregnancycheck
+💘 .lovecheck | 🌈 .gaycheck | 🏳️‍🌈 .gaydetector
+🔥 .hornycheck | 😻 .pussylover
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🧰 *Maker Menu*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🔥 .fire | ⚡ .thunder | ❄️ .ice | 🌫️ .snow
 👹 .devil | 💜 .purple | 💡 .light | 💻 .matrix
 🎬 .arena | 👾 .hacker | 🌿 .leaves | 💥 .glitch
 🌌 .metallic | 🖤 .blackpink | ✨ .neon | 🚫 .1917
 🎭 .impressive | 🏖️ .sand
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🔍 *Search & Download*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🎵 .play | 🎶 .song | 🎥 .video
 📸 .instagram | 📘 .facebook | 🎵 .tiktok | 🔽 .ytmp4
 
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 💻 *GitHub Commands*
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 🔗 .git | 🧑‍💻 .github | 📦 .sc | 📂 .script
 📁 .repo | 🌀 .gitclone
 `;
@@ -121,7 +123,6 @@ async function helpCommand(sock, chatId, message) {
 
         if (fs.existsSync(imagePath)) {
             const imageBuffer = fs.readFileSync(imagePath);
-
             await sock.sendMessage(chatId, {
                 image: imageBuffer,
                 caption: helpMessage,
@@ -130,13 +131,12 @@ async function helpCommand(sock, chatId, message) {
                     isForwarded: false,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363403266464072@newsletter',
-                        newsletterName: '',
+                        newsletterName: 'IMRAN BOT',
                         serverMessageId: -1
                     }
                 }
             }, { quoted: message });
 
-            // Send menu.mp3 audio after image
             if (fs.existsSync(audioPath)) {
                 const audioBuffer = fs.readFileSync(audioPath);
                 await sock.sendMessage(chatId, {
@@ -145,11 +145,10 @@ async function helpCommand(sock, chatId, message) {
                     ptt: false
                 }, { quoted: message });
             } else {
-                console.warn('menu.mp3 not found in assets');
+                console.warn('⚠️ menu.mp3 not found in assets.');
             }
-
         } else {
-            console.error('Bot image not found at:', imagePath);
+            console.error('⚠️ Bot image not found at:', imagePath);
             await sock.sendMessage(chatId, {
                 text: helpMessage,
                 contextInfo: {
@@ -163,7 +162,6 @@ async function helpCommand(sock, chatId, message) {
                 }
             });
         }
-
     } catch (error) {
         console.error('Error in help command:', error);
         await sock.sendMessage(chatId, { text: helpMessage });
