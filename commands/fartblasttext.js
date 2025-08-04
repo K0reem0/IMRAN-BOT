@@ -25,7 +25,7 @@ module.exports = {
       "😵‍💫 *Oh no... it's happening...*",
       "💣💨💥 *EXPLOSIVE FART DETONATED!*",
       "🥵💀 Oxygen levels dropping...",
-      "🧼 *Deploying emergency sanitizer...*",
+      "🧼 *Deploying emergency sanitizer...*"
     ];
 
     const finalRoasts = [
@@ -39,17 +39,18 @@ module.exports = {
       `🕳️ A black hole opened from ${tag}'s rear end.`,
       `🔥 NASA mistook ${tag}'s fart for an asteroid strike.`,
       `🌋 ${tag}'s fart caused a volcano to apologize.`,
-      `🍔 ${tag}'s fart melted cheese from 2km away.`,
       `📴 Everyone’s WiFi disconnected after ${tag}'s fart shockwave.`,
       `🎺 ${tag} invented a new musical instrument using their butt.`,
-      `🐛 Bugs in the area evolved gas masks thanks to ${tag}.`,
       `🔊 ${tag}'s fart got copyright claimed for being too unique.`,
       `🧼 Air fresheners gave up and resigned.`,
       `🎬 Netflix is making a documentary on ${tag}'s fart.`,
       `🌐 The entire internet slowed down for 3 seconds due to ${tag}'s gas.`,
+      `🥩 Meat turned vegan just smelling ${tag}'s fart.`,
+      `🪖 ${tag}'s fart just got deployed to defend the borders.`,
+      `🎃 Even pumpkins refused to be carved near ${tag}.`
     ];
 
-    // Run animation
+    // Send animation sequence
     for (let line of animation) {
       await conn.sendMessage(m.chat, {
         text: line,
@@ -58,10 +59,16 @@ module.exports = {
       await delay(700);
     }
 
-    // Send final insane roast
+    // Send random roast
     const roast = finalRoasts[Math.floor(Math.random() * finalRoasts.length)];
     await conn.sendMessage(m.chat, {
       text: roast,
+      mentions: [mentionedJid],
+    }, { quoted: m });
+
+    // Send caption (branding)
+    await conn.sendMessage(m.chat, {
+      text: `💨 *Fart mission complete.*\n🤖 *Powered by IMRAN BOT*`,
       mentions: [mentionedJid],
     }, { quoted: m });
   }
