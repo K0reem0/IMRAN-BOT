@@ -129,7 +129,7 @@ async function helpCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: false,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '0029VbAoVt0Bqbr1vsgafC3r@newsletter',
+                        newsletterJid: '120363403266464072@newsletter',
                         newsletterName: '',
                         serverMessageId: -1
                     }
@@ -156,7 +156,7 @@ async function helpCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: false,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '0029VbAoVt0Bqbr1vsgafC3r@newsletter',
+                        newsletterJid: '120363403266464072@newsletter',
                         newsletterName: 'IMRAN BOT',
                         serverMessageId: -1
                     }
