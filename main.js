@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const pregnancycheckCommand = require('./commands/pregnancycheck');
 const gaycheckCommand = require('./commands/gaycheck');
 const lovecheckCommand = require('./commands/lovecheck');
 const hornycheckCommand = require('./commands/hornycheck');
@@ -484,6 +485,12 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.gaylvl':
                 await gaycheckCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
+            case userMessage === '.pregnancycheck':
+            case userMessage === '.pregcheck':
+            case userMessage === '.pregnant':
+                await pregnancycheckCommand.run({ conn: sock, m: message });
+                break;
+
 
             case userMessage === '.alive':
                 await aliveCommand(sock, chatId, message);
