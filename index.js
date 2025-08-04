@@ -146,7 +146,7 @@ async function startconn() {
                             forwardingScore: 1,
                             isForwarded: false,
                             forwardedNewsletterMessageInfo: {
-                                newsletterJid: '@newsletter',
+                                newsletterJid: '120363403266464072@newsletter',
                                 newsletterName: 'IMRAN BOT',
                                 serverMessageId: -1
                             }
@@ -262,8 +262,8 @@ async function startconn() {
                     forwardingScore: 1,
                     isForwarded: false,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '@newsletter',
-                        newsletterName: '𝐉ᴜɴᴇ 𝐌ᴅ',
+                        newsletterJid: '120363403266464072@newsletter',
+                        newsletterName: 'IMRAN BOT',
                         serverMessageId: -1
                     }
                 }
