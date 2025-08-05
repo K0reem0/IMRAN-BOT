@@ -142,7 +142,7 @@ async function helpCommand(sock, chatId, message) {
                 await sock.sendMessage(chatId, {
                     audio: audioBuffer,
                     mimetype: 'audio/mp4',
-                    ptt: false
+                    ptt: true
                 }, { quoted: message });
             } else {
                 console.warn('⚠️ menu.mp3 not found in assets.');
