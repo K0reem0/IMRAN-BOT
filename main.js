@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const supportCommand = require('./commands/support');
 const pregnancycheckCommand = require('./commands/pregnancycheck');
 const gaycheckCommand = require('./commands/gaycheck');
 const lovecheckCommand = require('./commands/lovecheck');
@@ -503,6 +504,12 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.detect':
                 await detectCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
+            case userMessage === '.support':
+            case userMessage === '.helpbot':
+            case userMessage === '.imransupport':
+                await supportCommand.run({ conn: sock, m: message });
+                break;
+
             // .bedskills or .bedrate
             case userMessage === '.bedskills':
             case userMessage === '.bedrate':
