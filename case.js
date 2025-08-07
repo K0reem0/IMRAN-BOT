@@ -3,7 +3,6 @@ require('./setting/settings');
 const fs = require('fs');
 const ffmpeg = require("fluent-ffmpeg");
 const axios = require('axios');
-const didyoumean = require('didyoumean');
 const path = require('path');
 const chalk = require("chalk");
 const util = require("util");
