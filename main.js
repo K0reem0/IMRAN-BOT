@@ -437,11 +437,9 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.meme':
                 await memeCommand(sock, chatId, message);
                 break;
-            case userMessage === '.ghosttrace':
-            case userMessage === '.ghost':
-            case userMessage === '.spirit':
-                await ghosttraceCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
-                break;
+            // In your switch block
+        
+    
             case userMessage === '.imranhack':
             case userMessage === '.ihack':
             case userMessage === '.hacktarget':
@@ -464,6 +462,14 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.fartline':
                 await fartblasttextCommand.run({ conn: sock, m: message });
                 break;
+            case userMessage === '.ghosttrace':
+            case userMessage === '.ghost':
+            case userMessage === '.ghosthunter':
+            case userMessage === '.ghostdetect':
+                await ghosttraceCommand.run({ conn: sock, m: message, participants });
+                break;
+
+
             // 💘 LOVE CHECK
             case userMessage === '.lovecheck':
             case userMessage === '.loverate':
@@ -539,9 +545,10 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.flirt':
                 await flirtCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
-            // .flirt2
             case userMessage === '.flirt2':
-                await flirt2Command.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+            case userMessage === '.seduce':
+            case userMessage === '.flirty':
+                await flirt2Command.run({ conn: sock, m: message });
                 break;
           // .toilet
             case userMessage === '.toilet':
@@ -1011,7 +1018,7 @@ async function handleGroupParticipantUpdate(sock, update) {
             const data = JSON.parse(fs.readFileSync('./data/userGroupData.json'));
             const welcomeData = data.welcome[id];
             const welcomeMessage = welcomeData?.message || 'Welcome {user} to the group! 🎉';
-            const channelId = welcomeData?.channelId || '@newsletter';
+            const channelId = welcomeData?.channelId || '120363403266464072@newsletter';
 
             // Send welcome message for each new participant
             for (const participant of participants) {
@@ -1029,7 +1036,7 @@ async function handleGroupParticipantUpdate(sock, update) {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: channelId,
-                            newsletterName: 'June MD',
+                            newsletterName: 'IMRAN BOT',
                             serverMessageId: -1
                         }
                     }
@@ -1051,7 +1058,7 @@ async function handleGroupParticipantUpdate(sock, update) {
             const data = JSON.parse(fs.readFileSync('./data/userGroupData.json'));
             const goodbyeData = data.goodbye[id];
             const goodbyeMessage = goodbyeData?.message || 'Goodbye {user} 👋';
-            const channelId = goodbyeData?.channelId || '@newsletter';
+            const channelId = goodbyeData?.channelId || '120363403266464072@newsletter';
 
             // Send goodbye message for each leaving participant
             for (const participant of participants) {
@@ -1068,7 +1075,7 @@ async function handleGroupParticipantUpdate(sock, update) {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: channelId,
-                            newsletterName: 'June MD',
+                            newsletterName: 'IMRAN BOT',
                             serverMessageId: -1
                         }
                     }
