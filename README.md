@@ -43,7 +43,7 @@ No need to go anywhere else. . 😄
 Watch the tutorial and deploy your bot easily.
 
 <div align="left">
-  <a href="https://youtu.be/aZMUw_YkcwI?si=xxHilfRhsPUM3-fW">
+  <a href="https://youtu.be/iqP_yUA_t6o?si=jC8tEcczM8acv19F">
     <img src="https://img.shields.io/badge/TUTORIAL-red?style=for-the-badge&logo=youtube" alt="YouTube Tutorial"/>
   </a><br>
   <a href="https://bot-hosting.net/?aff=1068419752923508776">
