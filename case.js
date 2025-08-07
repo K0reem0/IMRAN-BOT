@@ -139,7 +139,7 @@ remoteJid: `status@broadcast`
 message: {
 'contactMessage': {
 'displayName': `${global.namaown}`,
-'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;ttname,;;;\nFN:ttname\nitem1.TEL;waid=254756182478:+254756182478\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;ttname,;;;\nFN:ttname\nitem1.TEL;waid=923461575994:+923461575994\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
 sendEphemeral: true
 }}
 }
@@ -172,7 +172,7 @@ if (global.autorecordtype) {
 }
 
 if (autobio) {
-  supreme.updateProfileStatus(` 𝙹𝚄𝙽𝙴 𝙼𝙳 𝙱𝙾𝚃 is Online✅ Runtime ${runtime(process.uptime())}`)
+  supreme.updateProfileStatus(` ⚡ IMRAN BOT Online | Running for: ${runtime(process.uptime())}`)
     .catch(err => console.error("Error updating status:", err));
 }
 
@@ -191,7 +191,7 @@ if (m.message.extendedTextMessage?.contextInfo?.mentionedJid?.includes(global.ow
 
 if (global.owneroff) {
   if (!isGroup && !isOwner) {
-    let text = `Sorry, our *Owner* is currently offline. Please wait until they are online and avoid spamming messages 😇`
+    let text = `🛑 IMRAN BOT Alert: Owner is away on a secret mission. No spam, or I’ll have to take action 😇`
     return supreme.sendMessage(m.chat, {
       text: `${text}`,
       contextInfo: {
@@ -355,7 +355,7 @@ const fs = require("fs");
 const path = require("path");
 
   try {
-    if (!text) return m.reply("What song do you want to download?");
+    if (!text) return m.reply("🎵 IMRAN BOT: Tell me the song name, and I’ll grab it for you in style!");
 
     let search = await yts(text);
     let link = search.all[0].url;
@@ -384,7 +384,7 @@ const path = require("path");
           });
 
           if (response.status !== 200) {
-            m.reply("sorry but the API endpoint didn't respond correctly. Try again later.");
+            m.reply("⚠️ IMRAN BOT Alert: The API is acting shy… try again later.");
             continue;
           }
 		ffmpeg(response.data)
@@ -396,7 +396,7 @@ const path = require("path");
                 {
                   document: { url: outputPath },
                   mimetype: "audio/mp3",
-		  caption: "𝙹𝚄𝙽𝙴 𝙼𝙳 𝙱𝙾𝚃",
+		  caption: "✦ IMRAN BOT ✦",
                   fileName: outputFileName,
                 },
                 { quoted: m }
@@ -404,7 +404,7 @@ const path = require("path");
               fs.unlinkSync(outputPath);
             })
             .on("error", (err) => {
-              m.reply("Download failed\n" + err.message);
+              m.reply("📥💥 📡 Connection jammed! IMRAN BOT will reattempt soon...\n" + err.message);
             });
 
           return;
@@ -416,9 +416,9 @@ const path = require("path");
    }
 
     // If no APIs succeeded
-    m.reply("An error occurred. All APIs might be down or unable to process the request.");
+    m.reply("🤖 IMRAN BOT: Every API just rage quit. I’ll try again when they calm down.");
   } catch (error) {
-    m.reply("Download failed\n" + error.message);
+    m.reply("❌ IMRAN BOT: Download crashed harder than my morning Wi-Fi.\n" + error.message);
   }
 }
 	  break;
