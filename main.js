@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const ghosttrace = require('./commands/ghosttrace');
 const deleteBotCommand = require('./commands/deletebot'); // path may differ
 const supportCommand = require('./commands/support');
 const pregnancycheckCommand = require('./commands/pregnancycheck');
@@ -435,11 +436,17 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.meme':
                 await memeCommand(sock, chatId, message);
                 break;
+            case userMessage === '.ghosttrace':
+            case userMessage === '.ghost':
+            case userMessage === '.spirit':
+                await ghosttraceCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
             case userMessage === '.imranhack':
             case userMessage === '.ihack':
             case userMessage === '.hacktarget':
                  await hackCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                  break;
+            
             case userMessage === '.unhack':
             case userMessage === '.rehack':
             case userMessage === '.reversehack':
