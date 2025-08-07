@@ -32,7 +32,7 @@ global.thumbbot = "https://files.catbox.moe/q04q5a.jpeg";
 global.thumbown = "https://files.catbox.moe/tbhr2g.jpg";
 
 //~~~~~~~~~~~ 📣 Channel Info ~~~~~~~~~~~//
-global.idchannel = "120363402785346228@newsletter*";
+global.idchannel = "120363403266464072@newsletter*";
 global.channelname = "🌐 IMRAN BOT UPDATES";
 global.channel = "https://whatsapp.com/channel/0029VbAoVt0Bqbr1vsgafC3r";
 
