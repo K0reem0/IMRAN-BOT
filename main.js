@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const deleteBotCommand = require('./commands/deletebot'); // path may differ
 const supportCommand = require('./commands/support');
 const pregnancycheckCommand = require('./commands/pregnancycheck');
 const gaycheckCommand = require('./commands/gaycheck');
@@ -317,6 +318,9 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 break;
             case userMessage === '.unmute':
                 await unmuteCommand(sock, chatId, senderId);
+                break;
+            case userMessage.startsWith('.deletebot'):
+                await deleteBotCommand(sock, chatId, isGroup, senderId, isOwner);
                 break;
             case userMessage.startsWith('.ban'):
                 await banCommand(sock, chatId, message);
