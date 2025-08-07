@@ -13,6 +13,8 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const flirtCommand = require('./commands/flirt');
+const flirt2Command = require('./commands/flirt2');
 const ghosttrace = require('./commands/ghosttrace');
 const deleteBotCommand = require('./commands/deletebot'); // path may differ
 const supportCommand = require('./commands/support');
@@ -86,7 +88,6 @@ const { handleAntiBadwordCommand, handleBadwordDetection } = require('./lib/anti
 const antibadwordCommand = require('./commands/antibadword');
 const { handleChatbotCommand, handleChatbotResponse } = require('./commands/chatbot');
 const takeCommand = require('./commands/take');
-//const { flirtCommand } = require('./commands/flirt');
 const characterCommand = require('./commands/character');
 const wastedCommand = require('./commands/wasted');
 const shipCommand = require('./commands/ship');
@@ -533,6 +534,14 @@ async function handleMessages(sock, messageUpdate, printLog) {
            // .mindread
             case userMessage === '.mindread':
                 await mindreadCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            // .flirt
+            case userMessage === '.flirt':
+                await flirtCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            // .flirt2
+            case userMessage === '.flirt2':
+                await flirt2Command.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
           // .toilet
             case userMessage === '.toilet':
