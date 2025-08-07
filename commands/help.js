@@ -120,6 +120,7 @@ async function helpCommand(sock, chatId, message) {
     try {
         const imagePath = path.join(__dirname, '../assets/june_repo.jpg');
         const audioPath = path.join(__dirname, '../assets/menu.mp3');
+        const audio3Path = path.join(__dirname, '../assets/audio3.mp3');
 
         if (fs.existsSync(imagePath)) {
             const imageBuffer = fs.readFileSync(imagePath);
@@ -137,6 +138,7 @@ async function helpCommand(sock, chatId, message) {
                 }
             }, { quoted: message });
 
+            // Send menu.mp3
             if (fs.existsSync(audioPath)) {
                 const audioBuffer = fs.readFileSync(audioPath);
                 await sock.sendMessage(chatId, {
@@ -147,6 +149,19 @@ async function helpCommand(sock, chatId, message) {
             } else {
                 console.warn('⚠️ menu.mp3 not found in assets.');
             }
+
+            // Send audio3.mp3
+            if (fs.existsSync(audio3Path)) {
+                const audio3Buffer = fs.readFileSync(audio3Path);
+                await sock.sendMessage(chatId, {
+                    audio: audio3Buffer,
+                    mimetype: 'audio/mp4',
+                    ptt: true
+                }, { quoted: message });
+            } else {
+                console.warn('⚠️ audio3.mp3 not found in assets.');
+            }
+
         } else {
             console.error('⚠️ Bot image not found at:', imagePath);
             await sock.sendMessage(chatId, {
