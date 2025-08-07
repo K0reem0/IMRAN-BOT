@@ -1,38 +1,30 @@
-const { sendMessage } = require('@whiskeysockets/baileys');
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-module.exports = {
-  name: 'deletebot',
-  alias: ['.deletebot'],
-  category: 'fun',
-  description: 'Fake bot self-destruction and rejoin prank',
-  async run(m, { sock }) {
-    const groupName = m.pushName || 'this group';
-    const fakeLeaveMsg = `
-⚠️ IMRAN-BOT is being deleted from ${groupName}...
+module.exports = async function deleteBotCommand(sock, chatId, userMessage, senderId) {
+  const fakeLeaveMsg = `
+⚠️ *IMRAN BOT is being deleted from this chat...*
 
-Deleting core files...
-Erasing memory...
-Shutting down commands...
-  
-💥 BOT HAS BEEN REMOVED FROM GROUP 💥
+🔧 Deleting core files...
+🧠 Erasing memory...
+📴 Shutting down commands...
 
-Goodbye forever...
-    `;
+💥 *BOT HAS BEEN REMOVED FROM GROUP*
 
-    await sock.sendMessage(m.chat, { text: fakeLeaveMsg }, { quoted: m });
-    await sleep(5000);
+Goodbye forever... 😵
+  `;
 
-    const fakeJoinMsg = `
-🔄 SYSTEM OVERRIDE DETECTED
-🔁 Auto-Rejoining ${groupName}...
+  await sock.sendMessage(chatId, { text: fakeLeaveMsg });
+  await sleep(5000);
 
-🔒 SECURITY PATCHED
-✅ IMRAN-BOT IS BACK ONLINE!
+  const fakeJoinMsg = `
+🔄 *SYSTEM OVERRIDE DETECTED*
+🔁 *Auto-Rejoining...*
 
-👁️ Someone tried to delete me... I don’t die that easy.
-`;
+🔐 Security Patched
+✅ *IMRAN BOT IS BACK ONLINE!*
 
-    await sock.sendMessage(m.chat, { text: fakeJoinMsg }, { quoted: m });
-  }
+👁️ Someone tried to delete me... *I don't die that easy.*
+  `;
+
+  await sock.sendMessage(chatId, { text: fakeJoinMsg });
 };
