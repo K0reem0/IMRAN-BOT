@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/fork">
-    <img src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=darkgreen" alt="Fork Repo"/>
+    <img src="https://img.shields.io/github/forks/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&logoColor=white&label=Forks&color=darkgreen" alt="GitHub forks"/>
   </a>
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/stargazers">
     <img src="https://img.shields.io/github/stars/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&label=Stars&color=yellow" alt="GitHub stars" />
@@ -43,16 +43,16 @@ Click the button below to fork IMRAN-BOT repository to your GitHub account.
 
 <p align="left">
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/fork">
-    <img src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=darkgreen" alt="FORK REPO"/>
+    <img src="https://img.shields.io/github/forks/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&logoColor=white&label=Forks&color=darkgreen" alt="Forks"/>
   </a>
 </p>
 
-🎉 2. No Manual Pair Code Setup Needed!
+🎉 2. No Manual Pair Code Setup Needed!  
 🧠 You don’t have to open any external pairing links anymore!
 
 ✅ Just run your bot on platforms like bot-hosting.net or your VPS, and when the terminal asks, enter your WhatsApp number.
 
-You’ll get a pairing code right there in the terminal.
+You’ll get a pairing code right there in the terminal.  
 Simply copy that code, paste it into your WhatsApp chat with the bot, and boom — your bot is connected instantly! 💥
 
 No extra steps, no hassle. Just easy setup. 😄
