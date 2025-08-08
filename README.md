@@ -24,14 +24,18 @@
 
 ---
 
-## What is IMRAN-BOT?
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,ff6347,1e90ff&center=true&width=400&height=40&lines=What+is+IMRAN-BOT%3F" alt="What is IMRAN-BOT?" />
+</div>
 
 IMRAN-BOT is a **powerful, multi-device WhatsApp bot** packed with **400+ fun and utility commands**, designed to make your WhatsApp groups more entertaining and easier to manage.  
 Created with passion by **Imran Khan**, it’s built on the robust Baileys library for reliable, lightning-fast WhatsApp automation.
 
 ---
 
-## Deployment Guide
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=00ced1,ff4500,32cd32&center=true&width=400&height=40&lines=Deployment+Guide" alt="Deployment Guide" />
+</div>
 
 1. Fork the repository on GitHub.  
 2. Run the bot on a VPS or hosting platform. Enter your WhatsApp number when prompted.  
@@ -41,14 +45,18 @@ Created with passion by **Imran Khan**, it’s built on the robust Baileys libra
 
 ---
 
-## Reminder
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=ff6347,32cd32,ff4500&center=true&width=400&height=40&lines=Reminder" alt="Reminder" />
+</div>
 
 - This bot has **no issues** on the WhatsApp side and works perfectly on **Heroku** — 100% safe and **not banned**.  
 Use it confidently for your WhatsApp groups and activities.
 
 ---
 
-## Key Features
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=1e90ff,ff6347,32cd32&center=true&width=400&height=40&lines=Key+Features" alt="Key Features" />
+</div>
 
 - 💬 Multi-Device WhatsApp Support (latest protocol)  
 - 🧠 Intelligent Auto Replies & Menus  
@@ -60,13 +68,17 @@ Use it confidently for your WhatsApp groups and activities.
 
 ---
 
-## License
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=ffa500,ff6347,1e90ff&center=true&width=400&height=40&lines=License" alt="License" />
+</div>
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Contacts
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,00aced,1877f2&center=true&width=400&height=40&lines=Contacts" alt="Contacts" />
+</div>
 
 <p align="center">
   <a href="https://wa.me/923414344575" target="_blank" rel="noopener noreferrer">
@@ -84,7 +96,9 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
-## Join Community
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=ff69b4,1e90ff,32cd32&center=true&width=400&height=40&lines=Join+Community" alt="Join Community" />
+</div>
 
 <p align="center">
   <a href="https://chat.whatsapp.com/GPIsXLbnQFZ0tRmHJWQZkQ?mode=ac_t" target="_blank" rel="noopener noreferrer">
@@ -98,7 +112,12 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
-## Inspiration & Support: Angel Jane
+<div align="center">
+  <img 
+    src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=ff1493,ff69b4,ff00ff&center=true&width=400&height=40&lines=Inspiration+%26+Support%3A+Angel+Jane" 
+    alt="Inspiration & Support" 
+  />
+</div>
 
 <p align="center" style="font-weight:bold; color:#ff1493; font-size:18px;">
   Angel Jane’s support and inspiration turned ideas into reality.<br/>
