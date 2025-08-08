@@ -37,11 +37,46 @@ Created with passion by **Imran Khan**, it’s built on the robust Baileys libra
   <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=00ced1,ff4500,32cd32&center=true&width=400&height=40&lines=Deployment+Guide" alt="Deployment Guide" />
 </div>
 
-1. Fork the repository on GitHub.  
-2. Run the bot on a VPS or hosting platform. Enter your WhatsApp number when prompted.  
-3. You will receive a pairing code directly on WhatsApp. Paste it in the terminal to connect.  
-4. Download the bot ZIP from the repo if needed.  
-5. Watch tutorial videos if you need help.
+🚀 1. Fork the Repository
+
+Click the button below to fork IMRAN-BOT repository to your GitHub account.
+
+<p align="left">
+  <a href="https://github.com/ahmadtech12/IMRAN-BOT/fork">
+    <img src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=darkgreen" alt="FORK REPO"/>
+  </a>
+</p>
+
+🎉 2. No Manual Pair Code Setup Needed!
+🧠 You don’t have to open any external pairing links anymore!
+
+✅ Just run your bot on platforms like bot-hosting.net or your VPS, and when the terminal asks, enter your WhatsApp number.
+
+You’ll get a pairing code right there in the terminal.
+Simply copy that code, paste it into your WhatsApp chat with the bot, and boom — your bot is connected instantly! 💥
+
+No extra steps, no hassle. Just easy setup. 😄
+
+💾 3. Download Bot Zip
+
+<p align="left">
+  <a href="https://github.com/ahmadtech12/IMRAN-BOT/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/badge/Download-Zip-blueviolet?style=for-the-badge&logo=github" alt="Download ZIP"/>
+  </a>
+</p>
+
+🛠️ 4. Deployment Help
+
+Watch the tutorial and deploy your bot easily.
+
+<div align="left">
+  <a href="https://youtu.be/iqP_yUA_t6o?si=jC8tEcczM8acv19F">
+    <img src="https://img.shields.io/badge/TUTORIAL-red?style=for-the-badge&logo=youtube" alt="YouTube Tutorial"/>
+  </a><br>
+  <a href="https://bot-hosting.net/?aff=1068419752923508776">
+    <img src="https://img.shields.io/badge/Bothosting%20Panel-green?style=for-the-badge" alt="BOT HOSTING PANEL"/>
+  </a>
+</div>
 
 ---
 
@@ -97,22 +132,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=ff69b4,1e90ff,32cd32&center=true&width=400&height=40&lines=Join+Community" alt="Join Community" />
-</div>
-
-<p align="center">
-  <a href="https://chat.whatsapp.com/GPIsXLbnQFZ0tRmHJWQZkQ?mode=ac_t" target="_blank" rel="noopener noreferrer">
-    <img title="Join WhatsApp Group" src="https://img.shields.io/badge/WhatsApp%20Group-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Group" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://whatsapp.com/channel/0029VbAoVt0Bqbr1vsgafC3r" target="_blank" rel="noopener noreferrer">
-    <img title="Join WhatsApp Channel" src="https://img.shields.io/badge/WhatsApp%20Channel-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Channel" />
-  </a>
-</p>
-
----
-
-<div align="center">
   <h3>
     <img 
       src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=6000&color=ff1493,ff69b4,ff00ff,00ffff,32cd32,ffd700&background=000000&center=true&vCenter=true&width=900&lines=Angel+Jane%E2%80%99s+support+and+inspiration+turned+ideas+into+reality;Her+belief+fueled+IMRAN-BOT%E2%80%99s+success;Thanks+for+being+the+spark+behind+it+all.+✨" 
@@ -120,7 +139,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
     />
   </h3>
 </div>
-
 
 ---
 
