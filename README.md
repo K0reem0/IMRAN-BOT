@@ -8,8 +8,8 @@
 </div>
 
 <div align="center"> 
-  <!-- Animated GIF showcase -->
-  <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="IMRAN BOT Fun Animation" height="300" />
+  <!-- Your branded bot image -->
+  <img src="https://raw.githubusercontent.com/ahmadtech12/IMRAN-BOT/main/assets/june_repo.jpg" alt="IMRAN BOT" height="300" />
 </div>
 
 ---
@@ -31,23 +31,26 @@
 
 ---
 
-## 🌟 What is IMRAN-BOT?
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=35&pause=1000&color=ff6347,ffd700,32cd32,1e90ff&center=true&width=700&height=60&lines=🔥+What+is+IMRAN-BOT?+🔥" alt="Section Title" />
+  </a>
+</div>
 
 IMRAN-BOT is a **powerful, multi-device WhatsApp bot** packed with **400+ fun and utility commands**, designed to make your WhatsApp groups more entertaining and easier to manage.  
 Created with passion by **Imran Hacks**, it’s built on the robust Baileys library for reliable, lightning-fast WhatsApp automation.
 
-<div align="center">
-  <!-- Animated feature highlight -->
-  <img src="https://media.giphy.com/media/l3vR8q70Te8psCBc0/giphy.gif" alt="Bot Features Animation" height="180" />
+<div align="center"> 
+  <!-- Your branded bot image again for style -->
+  <img src="https://raw.githubusercontent.com/ahmadtech12/IMRAN-BOT/main/assets/june_repo.jpg" alt="IMRAN BOT" height="200" />
 </div>
 
 ---
 
-## 🚀 Deployment Guide
-
 <div align="center">
-  <!-- Animated loading SVG -->
-  <img src="https://readme-typing-svg.demolab.com?font=Roboto+Mono&size=30&pause=500&color=007acc&center=true&width=600&height=50&lines=Step+1:+Fork+the+Repo" alt="Step 1" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,ff4500,00ced1&center=true&width=700&height=50&lines=🚀+Deployment+Guide" alt="Deployment Guide" />
+  </a>
 </div>
 
 ### 1. Fork the Repository
@@ -60,19 +63,11 @@ Click below to fork IMRAN-BOT to your GitHub account:
   </a>
 </p>
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Roboto+Mono&size=30&pause=500&color=007acc&center=true&width=600&height=50&lines=Step+2:+No+Manual+Pairing+Needed!" alt="Step 2" />
-</div>
-
 ### 2. No Manual Pair Code Needed!
 
 > When you run your bot on platforms like **bot-hosting.net** or a VPS, simply enter your WhatsApp number when prompted in the terminal.  
 > You will receive the pairing code **directly in your WhatsApp**, no external links required!  
 > Just copy and paste the code in the terminal and BOOM 💥 your bot is connected.
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Roboto+Mono&size=30&pause=500&color=007acc&center=true&width=600&height=50&lines=Step+3:+Download+Bot+ZIP" alt="Step 3" />
-</div>
 
 ### 3. Download Bot ZIP
 
@@ -81,10 +76,6 @@ Click below to fork IMRAN-BOT to your GitHub account:
     <img src="https://img.shields.io/badge/Download-Zip-blueviolet?style=for-the-badge&logo=github&animation=glow" alt="Download ZIP"/>
   </a>
 </p>
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Roboto+Mono&size=30&pause=500&color=007acc&center=true&width=600&height=50&lines=Step+4:+Watch+Deployment+Tutorial" alt="Step 4" />
-</div>
 
 ### 4. Deployment Help
 
@@ -102,10 +93,10 @@ Watch the step-by-step tutorial to deploy your bot with ease:
 
 ---
 
-## 🧩 Key Features
-
 <div align="center">
-  <img src="https://media.giphy.com/media/1iTHJ2K2ZznoLfF2ko/giphy.gif" alt="Features Animated" height="150" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=35&pause=1000&color=ff69b4,1e90ff,32cd32,ffa500&center=true&width=700&height=60&lines=🧩+Key+Features" alt="Key Features" />
+  </a>
 </div>
 
 - 💬 **Multi-Device WhatsApp Support** — Works seamlessly on the latest WhatsApp multi-device protocol  
@@ -118,45 +109,39 @@ Watch the step-by-step tutorial to deploy your bot with ease:
 
 ---
 
-## 🛠️ Quick Start
-
-1. **Clone or fork** this repo  
-2. Run `npm install` to install dependencies  
-3. Copy `.env.example` to `.env` and fill in your config  
-4. Run `npm start` and follow the instructions in terminal  
-5. Give your bot **admin rights** in WhatsApp groups for full features  
-6. Use commands with your chosen prefix (default is `.`)  
-
----
-
-## ⚡ Popular Commands
-
 <div align="center">
-  <img src="https://media.giphy.com/media/xT0GqnHLshXgJyFZ4I/giphy.gif" alt="Commands Animation" height="140" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=35&pause=1000&color=1e90ff,ff4500,32cd32,ff6347&center=true&width=700&height=60&lines=⚡+Popular+Commands" alt="Popular Commands" />
+  </a>
 </div>
 
-| Command        | Description                          | Access      |
-| -------------- | ---------------------------------- | ----------- |
-| `.imranhack`   | Simulate a terrifying hacking prank| Everyone    |
-| `.brainwash`   | Funny mind control prank           | Everyone    |
-| `.gaydetector` | Hilarious percentage-based test    | Everyone    |
-| `.clearsession`| Clear cached session data          | Owner only  |
-| `.love`        | Generate a funny love message      | Everyone    |
-| `.advice`      | Get random advice                  | Everyone    |
+| Command          | Description                           | Access      |
+| ---------------- | ----------------------------------- | ----------- |
+| `.imranhack`     | Simulate a terrifying hacking prank | Everyone    |
+| `.brainwash`     | Funny mind control prank             | Everyone    |
+| `.gaydetector`   | Hilarious percentage-based test     | Everyone    |
+| `.promote`       | Make a member admin                  | Admin only  |
+| `.roast`         | Send a savage roast to tagged user  | Everyone    |
+| `.love`          | Generate a funny love message        | Everyone    |
+| `.advice`        | Get random advice                    | Everyone    |
 
 ---
 
-## 📄 License
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=35&pause=1000&color=ff4500,ffa500,32cd32,1e90ff&center=true&width=700&height=60&lines=📄+License" alt="License" />
+  </a>
+</div>
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ❤️ Support & Contact
-
-<p align="center">
-  <img src="https://media.giphy.com/media/WbguKskXp3dQSPuVKa/giphy.gif" alt="Contact GIF" height="150" />
-</p>
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=35&pause=1000&color=ff1493,00ced1,32cd32,ffa07a&center=true&width=700&height=60&lines=❤️+Support+%26+Contact" alt="Support & Contact" />
+  </a>
+</div>
 
 - WhatsApp: [+92 341 4344575](https://wa.me/923414344575)  
 - Telegram: [@imrankhanbe](https://t.me/imrankhanbe)  
