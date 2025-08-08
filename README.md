@@ -16,16 +16,16 @@
 
 <p align="center">
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/fork">
-    <img src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=darkgreen&animation=glow" alt="Fork Repo"/>
+    <img src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=darkgreen" alt="Fork Repo"/>
   </a>
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/stargazers">
-    <img src="https://img.shields.io/github/stars/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&label=Stars&color=yellow&animation=pulse" alt="GitHub stars" />
+    <img src="https://img.shields.io/github/stars/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&label=Stars&color=yellow" alt="GitHub stars" />
   </a>
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/issues">
-    <img src="https://img.shields.io/github/issues/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&label=Issues&color=red&animation=blink" alt="GitHub issues" />
+    <img src="https://img.shields.io/github/issues/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&label=Issues&color=red" alt="GitHub issues" />
   </a>
   <a href="https://www.npmjs.com/package/imran-bot">
-    <img src="https://img.shields.io/npm/v/imran-bot?style=for-the-badge&color=blue&animation=glow" alt="NPM version" />
+    <img src="https://img.shields.io/npm/v/imran-bot?style=for-the-badge&color=blue" alt="NPM version" />
   </a>
 </p>
 
@@ -39,10 +39,6 @@
 
 IMRAN-BOT is a **powerful, multi-device WhatsApp bot** packed with **400+ fun and utility commands**, designed to make your WhatsApp groups more entertaining and easier to manage.  
 Created with passion by **Imran Hacks**, it’s built on the robust Baileys library for reliable, lightning-fast WhatsApp automation.
-
-<div align="center"> 
-  <img src="https://raw.githubusercontent.com/ahmadtech12/IMRAN-BOT/main/assets/june_repo.jpg" alt="IMRAN BOT" height="200" />
-</div>
 
 ---
 
@@ -58,7 +54,7 @@ Click below to fork IMRAN-BOT to your GitHub account:
 
 <p align="left">
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/fork">
-    <img src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=darkgreen&animation=glow" alt="Fork Repo"/>
+    <img src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=darkgreen" alt="Fork Repo"/>
   </a>
 </p>
 
@@ -72,7 +68,7 @@ Click below to fork IMRAN-BOT to your GitHub account:
 
 <p align="left">
   <a href="https://github.com/ahmadtech12/IMRAN-BOT/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/badge/Download-Zip-blueviolet?style=for-the-badge&logo=github&animation=glow" alt="Download ZIP"/>
+    <img src="https://img.shields.io/badge/Download-Zip-blueviolet?style=for-the-badge&logo=github" alt="Download ZIP"/>
   </a>
 </p>
 
@@ -82,11 +78,11 @@ Watch the step-by-step tutorial to deploy your bot with ease:
 
 <div align="left">
   <a href="https://youtu.be/iqP_yUA_t6o?si=jC8tEcczM8acv19F">
-    <img src="https://img.shields.io/badge/TUTORIAL-YouTube-red?style=for-the-badge&logo=youtube&animation=pulse" alt="YouTube Tutorial"/>
+    <img src="https://img.shields.io/badge/TUTORIAL-YouTube-red?style=for-the-badge&logo=youtube" alt="YouTube Tutorial"/>
   </a>
 
   <a href="https://bot-hosting.net/?aff=1068419752923508776">
-    <img src="https://img.shields.io/badge/Bot%20Hosting-Panel-green?style=for-the-badge&animation=glow" alt="Bot Hosting Panel"/>
+    <img src="https://img.shields.io/badge/Bot%20Hosting-Panel-green?style=for-the-badge" alt="Bot Hosting Panel"/>
   </a>
 </div>
 
@@ -197,7 +193,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&color=FFFFFF&background=000000&center=true&vCenter=true&width=600&lines=💎+BWM+XMD+Quantum+Edition+by+Ibrahim+Adams;⚡+The+Future+of+WhatsApp+Bots+is+Here" alt="Footer Animation" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&color=FFFFFF&background=000000&center=true&vCenter=true&width=600&lines=🤖+IMRAN+BOT+by+Imran+Hacks;⚡+The+Future+of+WhatsApp+Bots+is+Here" alt="Footer Animation" />
 </h3>
 
 ---
