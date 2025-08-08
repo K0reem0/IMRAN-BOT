@@ -129,6 +129,16 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
   </a>
 </p>
 
+<p align="center">
+  <a href="https://whatsapp.com/channel/0029VbAoVt0Bqbr1vsgafC3r" target="_blank" rel="noopener noreferrer">
+    <img title="WhatsApp Channel" src="https://img.shields.io/badge/WhatsApp_Channel-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Channel" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://chat.whatsapp.com/GPIsXLbnQFZ0tRmHJWQZkQ?mode=ac_t" target="_blank" rel="noopener noreferrer">
+    <img title="Bot Support Group" src="https://img.shields.io/badge/Bot_Support_Group-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Bot Support Group" />
+  </a>
+</p>
+
 ---
 
 <div align="center">
