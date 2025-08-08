@@ -72,7 +72,7 @@ const store = {
     }
 }
 
-let phoneNumber = "254792021944"
+let phoneNumber = "923461575994"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
 global.botname = "IMRAN BOT"
@@ -141,12 +141,12 @@ async function startconn() {
                 // Only try to send error message if we have a valid chatId
                 if (mek.key && mek.key.remoteJid) {
                     await conn.sendMessage(mek.key.remoteJid, { 
-                        text: '❌ An error occurred while processing your message.',
+                        text: 'IMRAN BOT: Oops! An error occurred while processing your message.',
                         contextInfo: {
                             forwardingScore: 1,
                             isForwarded: false,
                             forwardedNewsletterMessageInfo: {
-                                newsletterJid: '120363403266464072@newsletter',
+                                newsletterJid: '120363419191446996@newsletter',
                                 newsletterName: 'IMRAN BOT',
                                 serverMessageId: -1
                             }
@@ -262,7 +262,7 @@ async function startconn() {
                     forwardingScore: 1,
                     isForwarded: false,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363403266464072@newsletter',
+                        newsletterJid: '120363419191446996@newsletter',
                         newsletterName: 'IMRAN BOT',
                         serverMessageId: -1
                     }
