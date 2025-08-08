@@ -263,7 +263,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             ) {
                 if (!isSenderAdmin && !message.key.fromMe) {
                     await sock.sendMessage(chatId, {
-                        text: 'Sorry, only group admins can use this command.',
+                        text: '😈 IMRAN BOT: Nice try, peasant. This button belongs to the kings and queens (admins).',
                         ...channelInfo
                     });
                     return;
