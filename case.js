@@ -182,7 +182,7 @@ if (m.sender.startsWith("92") && global.anti92 === true) {
 
 if (m.message.extendedTextMessage?.contextInfo?.mentionedJid?.includes(global.owner + "@s.whatsapp.net")) {
   if (!m.quoted) {
-    reply("Owner is currently offline, please wait for a response");
+    reply("💤 The boss is resting now — please wait a bit.");
     setTimeout(() => {
       supreme.sendMessage(m.key.remoteJid, { delete: m.key });
     }, 2000);
@@ -213,17 +213,17 @@ if (global.owneroff) {
 }
 switch (command) {        
 case "public": { 
-if (!isBot) return reply(`Feature for owner only`)
+if (!isBot) return reply(`🌐 IMRAN BOT: To make me public, type .mode public in your inbox.`)
 supreme.public = true
-reply(`Successfully✅ Changed Bot Mode To Public`)
+reply(`✅ IMRAN BOT: Successfully changed bot mode to Public! 🚀`)
 }
 break;
 //////////////////self//////////////////
 case "self":
 case "private": { 
-if (!isBot) return reply(`Feature for owner only`)
+if (!isBot) return reply(`🌐 IMRAN BOT: To make me public, type .mode private in your inbox`)
 supreme.public = false
-reply(`Successfully✅ Changed Bot Mode To Self/Private`)
+reply(`✅ IMRAN BOT: Successfully changed bot mode to Self/Private! 🔒`)
 }
 break;
         
