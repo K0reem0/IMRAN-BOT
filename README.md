@@ -41,7 +41,6 @@ IMRAN-BOT is a **powerful, multi-device WhatsApp bot** packed with **400+ fun an
 Created with passion by **Imran Hacks**, it’s built on the robust Baileys library for reliable, lightning-fast WhatsApp automation.
 
 <div align="center"> 
-  <!-- Your branded bot image again for style -->
   <img src="https://raw.githubusercontent.com/ahmadtech12/IMRAN-BOT/main/assets/june_repo.jpg" alt="IMRAN BOT" height="200" />
 </div>
 
@@ -93,6 +92,20 @@ Watch the step-by-step tutorial to deploy your bot with ease:
 
 ---
 
+## ⚠️ Reminder
+
+- This bot has **no issues** on the WhatsApp side, and it works perfectly on **Heroku** — 100% safe and **not banned**.  
+Use it confidently for your WhatsApp activities and more; it will help you a lot.
+
+---
+
+★ EVERYTHING SAY THANK YOU TO GOD. ©  
+<div align="center">
+  <img src="https://i.imgur.com/LyHic3i.gif" alt="Thank You GIF" />
+</div>
+
+---
+
 <div align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=35&pause=1000&color=ff69b4,1e90ff,32cd32,ffa500&center=true&width=700&height=60&lines=🧩+Key+Features" alt="Key Features" />
@@ -102,10 +115,10 @@ Watch the step-by-step tutorial to deploy your bot with ease:
 - 💬 **Multi-Device WhatsApp Support** — Works seamlessly on the latest WhatsApp multi-device protocol  
 - 🧠 **Intelligent Auto Replies & Menus** — Easy to use interactive menus and command suggestions  
 - 🎉 **400+ Fun & Prank Commands** — Including `.imranhack`, `.brainwash`, `.gaydetector`, and more!  
-- 🔧 **Comprehensive Group Moderation Tools** — Kick, ban, promote, and manage your groups with ease  
+- 🔧 **Comprehensive Group Moderation Tools** — Promote, ban, and manage your groups easily  
 - 📁 **Media Download & Processing** — Download videos, audios, stickers, and images effortlessly  
 - 🤖 **Fully Customizable** — Change prefix, modes, and owner/admin controls  
-- ⚡ **Fast & Reliable** — Built on top of Baileys with automatic reconnection and error handling  
+- ⚡ **Fast & Reliable** — Built on Baileys with auto-reconnect and error handling  
 
 ---
 
@@ -138,14 +151,54 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=35&pause=1000&color=ff1493,00ced1,32cd32,ffa07a&center=true&width=700&height=60&lines=❤️+Support+%26+Contact" alt="Support & Contact" />
+  <a href="https://wa.me/923414344575" target="_blank" rel="noopener noreferrer">
+    <img title="WhatsApp Contact" src="https://img.shields.io/badge/WhatsApp-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Contact" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://t.me/imrankhanbe" target="_blank" rel="noopener noreferrer">
+    <img title="Telegram Contact" src="https://img.shields.io/badge/Telegram-%230068FF?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Contact" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.facebook.com/imrankhanicfu" target="_blank" rel="noopener noreferrer">
+    <img title="Facebook Profile" src="https://img.shields.io/badge/Facebook-%231877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook Profile" />
   </a>
 </div>
 
-- WhatsApp: [+92 341 4344575](https://wa.me/923414344575)  
-- Telegram: [@imrankhanbe](https://t.me/imrankhanbe)  
-- Facebook: [Imran Khan IC Fu](https://www.facebook.com/imrankhanicfu)  
+---
+
+<p align="center">
+  <a href="https://chat.whatsapp.com/GPIsXLbnQFZ0tRmHJWQZkQ?mode=ac_t" target="_blank" rel="noopener noreferrer">
+    <img title="Join WhatsApp Group" src="https://img.shields.io/badge/WhatsApp%20Group-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Group" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://whatsapp.com/channel/0029VbAoVt0Bqbr1vsgafC3r" target="_blank" rel="noopener noreferrer">
+    <img title="Join WhatsApp Channel" src="https://img.shields.io/badge/WhatsApp%20Channel-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Channel" />
+  </a>
+</p>
+
+---
+
+<div align="center">
+
+<!-- Animated glowing typing heading -->
+<img 
+  src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=40&duration=4000&pause=1000&color=ff00ff,ff69b4,ff1493&center=true&vCenter=true&width=600&height=60&lines=⚡+Inspiration+%26+Support;Angel+Jane" 
+  alt="Glowing Animated Heading" 
+/>
+
+<p align="center" style="font-size:16px; font-weight:bold; color:#ff69b4; margin-top:8px;">
+  Angel Jane’s support and inspiration turned ideas into reality.<br/>
+  Her belief fueled IMRAN-BOT’s success.<br/><br/>
+  Thanks for being the spark behind it all. ✨
+</p>
+
+</div>
+
+---
+
+<h3 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&color=FFFFFF&background=000000&center=true&vCenter=true&width=600&lines=💎+BWM+XMD+Quantum+Edition+by+Ibrahim+Adams;⚡+The+Future+of+WhatsApp+Bots+is+Here" alt="Footer Animation" />
+</h3>
 
 ---
 
