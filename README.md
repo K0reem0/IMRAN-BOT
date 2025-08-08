@@ -43,10 +43,9 @@ Created with passion by **Imran Hacks**, it’s built on the robust Baileys libr
 ---
 
 <div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,ff4500,00ced1&center=true&width=700&height=50&lines=🚀+Deployment+Guide" alt="Deployment Guide" />
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,ff4500,00ced1&center=true&width=700&height=50&lines=🚀+Deployment+Guide" alt="Deployment Guide" />
 </div>
+
 
 ### 1. Fork the Repository
 
