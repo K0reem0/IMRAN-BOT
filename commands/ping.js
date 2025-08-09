@@ -1,5 +1,3 @@
-const settings = require('../settings.js');
-
 function formatTime(seconds) {
     const days = Math.floor(seconds / (24 * 60 * 60));
     seconds %= (24 * 60 * 60);
