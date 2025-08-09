@@ -1,6 +1,4 @@
 const settings = require('../settings.js');
-const fs = require('fs');
-const path = require('path');
 
 function formatTime(seconds) {
     const days = Math.floor(seconds / (24 * 60 * 60));
@@ -31,22 +29,6 @@ async function pingCommand(sock, chatId, message) {
             text: `⚡ ${ping}ms | ⏳ ${uptime} | 🤖 Still not dead.`,
             quoted: message
         });
-
-        // Select a random audio from audio1.mp3 to audio4.mp3
-        const audioNumber = Math.floor(Math.random() * 4) + 1; // 1 to 4
-        const audioPath = path.join(__dirname, `../assets/audio${audioNumber}.mp3`);
-
-        if (fs.existsSync(audioPath)) {
-            await sock.sendMessage(chatId, {
-                audio: { url: audioPath },
-                mimetype: 'audio/mp4',
-                ptt: true
-            }, { quoted: message });
-        } else {
-            await sock.sendMessage(chatId, {
-                text: `⚠️ audio${audioNumber}.mp3 not found!`
-            }, { quoted: message });
-        }
 
     } catch (err) {
         console.error('Ping error:', err);
