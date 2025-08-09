@@ -28,8 +28,25 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,ff6347,1e90ff&center=true&width=400&height=40&lines=What+is+IMRAN-BOT%3F" alt="What is IMRAN-BOT?" />
 </div>
 
-IMRAN-BOT is a **powerful, multi-device WhatsApp bot** packed with **400+ fun and utility commands**, designed to make your WhatsApp groups more entertaining and easier to manage.  
-Created with passion by **Imran Khan**, it’s built on the robust Baileys library for reliable, lightning-fast WhatsApp automation.
+<div align="center">
+✨🚀 IMRAN-BOT 🚀✨
+The Future of WhatsApp Automation
+
+</div>
+IMRAN-BOT isn’t just another WhatsApp bot — it’s a multi-device powerhouse with 400+ thrilling, feature-packed commands that bring fun, style, and efficiency to every conversation.
+Originally launched by Imran Khan, the bot’s coolest and most innovative features were brought to life by none other than Hassan Brovhi — a true visionary and creative genius.
+
+<div align="center">
+💎 Special Thanks & Respect 💎
+
+Hassan Brovhi — the creative powerhouse whose brilliance turned IMRAN-BOT from great to legendary.
+Your ideas inspired features people adore, your creativity pushed boundaries,
+and your dedication is woven into the heart of this bot.
+
+🔥 This bot carries your signature magic. 🔥
+🚀✨ Forever grateful! ✨🚀
+
+</div>
 
 ---
 
