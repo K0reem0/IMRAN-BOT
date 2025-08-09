@@ -457,6 +457,12 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.imranspy':
                 await spyCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
+            // 💘 LOVE FINDER
+            case userMessage === '.find':
+            case userMessage === '.match':
+            case userMessage === '.ship':
+                await findCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
             case userMessage === '.fartblasttext':
             case userMessage === '.fartanim':
             case userMessage === '.gasbomb':
