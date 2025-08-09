@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const findCommand = require('./commands/find');
 const flirtCommand = require('./commands/flirt');
 const flirt2Command = require('./commands/flirt2');
 const ghosttrace = require('./commands/ghosttrace');
