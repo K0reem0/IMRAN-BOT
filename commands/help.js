@@ -39,87 +39,6 @@ async function helpCommand(sock, chatId, message) {
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 📂 *Owner Commands*
-━━━━━━━━━━━━━━━━━━━━━━━
-🔒 .ban | .unban | .promote | .demote
-🔕 .mute | .unmute | .delete | .kick
-⚠️ .warnings | .warn | .antilink | .antibadword
-🧹 .clear | .tag | .tagall | .chatbot
-🔗 .resetlink | .welcome | .goodbye
-
-━━━━━━━━━━━━━━━━━━━━━━━
-🌐 *General Commands*
-━━━━━━━━━━━━━━━━━━━━━━━
-📜 .menu | 📶 .ping | ⏱️ .runtime | 🔊 .tts
-👑 .owner | 😂 .joke | 💬 .quote | 🧠 .fact
-🌦️ .weather | 📰 .news | 💌 .attp | 🎵 .lyrics
-🎱 .8ball | ℹ️ .groupinfo | 👮 .admins | 🔍 .jid
-📸 .ss | 🌍 .trt | 📞 .vv
-
-━━━━━━━━━━━━━━━━━━━━━━━
-⚙️ *Settings Commands*
-━━━━━━━━━━━━━━━━━━━━━━━
-🌐 .public | 🔐 .private | 🟢 .autostatus
-📖 .autoread | 🧹 .clearsession | 🛡️ .antidelete
-🧼 .cleartmp | 💬 .autoreact | 🖼️ .getpp | 📸 .setpp
-📜 .autobio | ⌨️ .autotyping | 🎙️ .autorecording
-
-━━━━━━━━━━━━━━━━━━━━━━━
-🎨 *Sticker Commands*
-━━━━━━━━━━━━━━━━━━━━━━━
-🌀 .blur | 🖼️ .simage | 🌟 .sticker | 🐯 .tgsticker
-🤣 .meme | 🎯 .take | 🔀 .emojimix
-
-━━━━━━━━━━━━━━━━━━━━━━━
-🎮 *Game Commands*
-━━━━━━━━━━━━━━━━━━━━━━━
-❌⭕ .tictactoe | 🎯 .hangman | ❓ .guess
-🧠 .trivia | ✍️ .answer | 🤐 .truth | 😈 .dare
-
-━━━━━━━━━━━━━━━━━━━━━━━
-🧠 *AI & Search*
-━━━━━━━━━━━━━━━━━━━━━━━
-🤖 .gpt | 💡 .gptgo | 🧬 .gemini | 🧠 .flux
-const settings = require('../settings');
-const fs = require('fs');
-const path = require('path');
-
-function formatTime(seconds) {
-    const days = Math.floor(seconds / (24 * 60 * 60));
-    seconds %= (24 * 60 * 60);
-    const hours = Math.floor(seconds / (60 * 60));
-    seconds %= (60 * 60);
-    const minutes = Math.floor(seconds / 60);
-    seconds = Math.floor(seconds % 60);
-
-    let time = '';
-    if (days > 0) time += `${days}d `;
-    if (hours > 0) time += `${hours}h `;
-    if (minutes > 0) time += `${minutes}m `;
-    if (seconds > 0 || time === '') time += `${seconds}s`;
-
-    return time.trim();
-}
-
-async function helpCommand(sock, chatId, message) {
-    const start = Date.now();
-    await sock.sendMessage(chatId, { text: '_🔄 Loading IMRAN-BOT menu..._' }, { quoted: message });
-    const end = Date.now();
-    const ping = Math.round((end - start) / 2);
-    const uptimeFormatted = formatTime(process.uptime());
-
-    const helpMessage = `
-┏━━━━━━━━━━━━━━━━━━━━━━┓
-┃ 🤖 *IMRAN-BOT COMMAND MENU* 🤖
-┗━━━━━━━━━━━━━━━━━━━━━━┛
-
-📍 *Owner:* ${settings.botOwner}
-⏳ *Uptime:* ${uptimeFormatted}
-🕐 *Time:* ${new Date().toLocaleString()}
-⚡ *Speed:* ${ping}ms
-🛠️ *Version:* ${settings.version}
-
-━━━━━━━━━━━━━━━━━━━━━━━
-📂 *Owner Commands*
 🔒 .ban | .unban | .promote | .demote
 🔕 .mute | .unmute | .delete | .kick
 ⚠️ .warnings | .warn | .antilink | .antibadword
@@ -208,7 +127,6 @@ async function helpCommand(sock, chatId, message) {
                 }
             }, { quoted: message });
 
-            // Send only menu.mp3
             if (fs.existsSync(audioPath)) {
                 const audioBuffer = fs.readFileSync(audioPath);
                 await sock.sendMessage(chatId, {
