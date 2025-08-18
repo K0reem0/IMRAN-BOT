@@ -1,34 +1,43 @@
+// commands/alive.js
+const os = require("os");
+
 module.exports = {
-  name: 'alive',
-  alias: ['bot'],
-  category: 'general',
-  desc: 'Check if bot is alive',
-  async run({ sock, m }) {
-    function formatUptime(seconds) {
-      seconds = Number(seconds);
-      const d = Math.floor(seconds / (3600 * 24));
-      const h = Math.floor((seconds % (3600 * 24)) / 3600);
-      const min = Math.floor((seconds % 3600) / 60);
-      const s = Math.floor(seconds % 60);
-      const parts = [];
-      if (d) parts.push(`${d}d`);
-      if (h) parts.push(`${h}h`);
-      if (min) parts.push(`${min}m`);
-      parts.push(`${s}s`);
-      return parts.join(' ');
-    }
+    name: 'alive',
+    alias: ['bot', 'online'],
+    category: 'general',
+    desc: 'Check if bot is alive',
+    async run({ conn, m, args }) {
+        try {
+            // ✅ Safe extraction
+            const sender = m.key?.participant || m.key?.remoteJid || "unknown";
+            const chatId = m.key?.remoteJid;
+            const tagUser = sender.includes("@") ? "@" + sender.split("@")[0] : sender;
 
-    const uptime = formatUptime(process.uptime());
+            // 🕒 Uptime calculation
+            let uptimeSec = process.uptime();
+            let hours = Math.floor(uptimeSec / 3600);
+            let minutes = Math.floor((uptimeSec % 3600) / 60);
+            let seconds = Math.floor(uptimeSec % 60);
+            let uptime = `${hours}h ${minutes}m ${seconds}s`;
 
-    const banner = `
-╭━━━〔 🤖 IMRAN BOT 〕━━━╮
-┃  ✅ Alive & Running Strong!
+            const aliveMsg = `
+╔══✪〘 𝗜𝗠𝗥𝗔𝗡-𝗕𝗢𝗧 〙✪══
 ┃
-┃  ⏳ Uptime: ${uptime}
-┃  💻 Status: Online
-╰━━━━━━━━━━━━━━━━━━━━━━━╯
-    `.trim();
+┃   ✅ Bot is Alive & Running
+┃   ⏱️ Uptime: ${uptime}
+┃   👤 Requested by: ${tagUser}
+┃
+╚══════════════════╝
+            `;
 
-    await sock.sendMessage(m.chat, { text: banner }, { quoted: m });
-  }
+            await conn.sendMessage(chatId, { 
+                text: aliveMsg, 
+                mentions: [sender] 
+            }, { quoted: m });
+
+        } catch (e) {
+            console.error("Error in alive command:", e);
+            await conn.sendMessage(m.key.remoteJid, { text: "❌ Something went wrong in alive command." }, { quoted: m });
+        }
+    }
 };
