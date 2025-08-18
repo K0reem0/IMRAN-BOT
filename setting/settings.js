@@ -1,8 +1,8 @@
 const fs = require('fs');
 
 //~~~~~~~~~~~ 👑 Owner & Bot Identity ~~~~~~~~~~~//
-global.owner = "639691465580";
-global.developer = "639691465580";
+global.owner = "923414344575";
+global.developer = "923414344575";
 global.bot = "";
 global.devname = "💻 Imran Hacks";
 global.ownername = "👑 Imran Khan";
@@ -11,7 +11,7 @@ global.versisc = "2.0.0";
 global.packname = "✨IMRAN BOT✨";
 
 //~~~~~~~~~~~ 🌐 Social Links ~~~~~~~~~~~//
-global.linkwa = "https://wa.me/639691465580";
+global.linkwa = "https://wa.me/923414344575";
 global.linkyt = "https://www.youtube.com/@imranhacks";
 global.linktt = "https://tiktok.com/@imranhacks";
 global.linktele = "https://t.me/imrankhanbe";
