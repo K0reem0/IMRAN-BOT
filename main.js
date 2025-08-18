@@ -519,7 +519,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
 
 
             case userMessage === '.alive':
-                await aliveCommand(sock, chatId, message);
+                await aliveCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
             // .brainwash
             case userMessage === '.brainwash':
