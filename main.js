@@ -13,6 +13,7 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 
 
 // Command imports
+const userinfoCommand = require('./commands/userinfo.js');
 const findCommand = require('./commands/find');
 const flirtCommand = require('./commands/flirt');
 const flirt2Command = require('./commands/flirt2');
@@ -503,6 +504,15 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage === '.howgay':
             case userMessage === '.rainbowscan':
                 await gaydetectorCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            case userMessage === '.userinfo':
+            case userMessage === '.liveuser':
+            case userMessage === '.funuserinfo':
+                await userinfoCommand.exec({ 
+                    sock, 
+                    m: message, 
+                    args: userMessage.split(' ').slice(1)
+                });
                 break;
 
            // 🏳️‍🌈 GAY CHECK (Quick % style)
