@@ -1,8 +1,8 @@
 const fs = require('fs');
 
 //~~~~~~~~~~~ 👑 Owner & Bot Identity ~~~~~~~~~~~//
-global.owner = "923414344575";
-global.developer = "923414344575";
+global.owner = "966560801636";
+global.developer = "966560801636";
 global.bot = "";
 global.devname = "💻 Imran Hacks";
 global.ownername = "👑 Imran Khan";
