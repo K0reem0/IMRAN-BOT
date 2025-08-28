@@ -15,6 +15,8 @@ const { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn
 // Command imports
 const userinfoCommand = require('./commands/userinfo.js');
 const findCommand = require('./commands/find');
+const pasteCommand = require('./commands/paste');
+const testCommand = require('./commands/test');
 const flirtCommand = require('./commands/flirt');
 const flirt2Command = require('./commands/flirt2');
 const ghosttrace = require('./commands/ghosttrace');
@@ -238,7 +240,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
         const isAdminCommand = adminCommands.some(cmd => userMessage.startsWith(cmd));
 
         // List of owner commands
-        const ownerCommands = ['.mode', '.autostatus', '.antidelete', '.cleartmp', '.setpp', '.clearsession', '.areact', '.autoreact'];
+        const ownerCommands = ['.mode', '.autostatus', '.antidelete', '.cleartmp', '.setpp', '.paste', '.clearsession', '.areact', '.autoreact'];
         const isOwnerCommand = ownerCommands.some(cmd => userMessage.startsWith(cmd));
 
         let isSenderAdmin = false;
@@ -528,6 +530,10 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 break;
 
 
+            case userMessage === '.تست':
+                await testCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
+                break;
+            
             case userMessage === '.alive':
                 await aliveCommand.run({ conn: sock, m: message, args: userMessage.split(' ').slice(1) });
                 break;
