@@ -9,6 +9,14 @@ module.exports = {
     category: "owner",
     async run({ conn, m, args, usedPrefix, command, __dirname }) {
         try {
+            // ✅ Owner check
+            const isOwner = m.key.fromMe;
+            if (!isOwner) {
+                return await conn.sendMessage(m.chat, {
+                    text: '❌ *Only the bot owner can use this command!*'
+                }, { quoted: m });
+            }
+
             if (!args.length) {
                 return conn.sendMessage(m.chat, {
                     text: `
