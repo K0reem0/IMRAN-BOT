@@ -19,13 +19,13 @@ global.linktele = "https://t.me/imrankhanbe";
 //~~~~~~~~~~~ ⚙️ Bot Settings ~~~~~~~~~~~//
 global.prefix = ["", "!", ".", ",", "#", "/", "🎭", "〽️"];
 global.autoRecording = false;
-global.autoTyping = true;
+global.autoTyping = false;
 global.autorecordtype = false;
 global.autoread = true;
-global.autobio = true;
+global.autobio = false;
 global.anti92 = false;
 global.owneroff = false;
-global.autoswview = true;
+global.autoswview = false;
 
 //~~~~~~~~~~~ 🖼️ Bot Thumbnails ~~~~~~~~~~~//
 global.thumbbot = "https://files.catbox.moe/q04q5a.jpeg";
